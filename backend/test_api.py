@@ -32,7 +32,8 @@ def main() -> None:
 
     shap_dhaka = backend_app.get_shap("Dhaka")
     assert len(shap_dhaka["reasons"]) == 3
-    assert abs(shap_dhaka["reasons"][0]["log_shap"] - 2.5213) < 0.05
+    assert "cases_lag1" in shap_dhaka["reasons"][0]["label"]
+    assert shap_dhaka["reasons"][0]["log_shap"] > 1.0
     print("SHAP Dhaka #1:", shap_dhaka["reasons"][0])
 
     div = backend_app.get_division("Dhaka")

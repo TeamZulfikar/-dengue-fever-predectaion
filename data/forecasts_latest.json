@@ -1,39 +1,39 @@
 {
-  "generated_at": "2026-11-27T15:18:02.719779+00:00",
+  "generated_at": "2026-11-27T15:48:04.967875+00:00",
   "blend_weights": {
     "gbm": 0.5,
     "persistence": 0.5
   },
-  "latest_week": "2026-06-29",
-  "latest_observed_week": "2026-06-22",
+  "latest_week": "2026-11-16",
+  "latest_observed_week": "2026-11-09",
   "districts": [
     {
       "district": "Bagerhat",
       "division": "Khulna",
       "lat": 22.66,
       "lon": 89.79,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 48.0,
-      "pred_gbm": 60.7,
-      "pred_persist": 48.0,
-      "pred_blend": 54.4,
-      "risk_level": "medium",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 135.0,
+      "pred_gbm": 107.1,
+      "pred_persist": 135.0,
+      "pred_blend": 121.1,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 14.9,
-          "log_shap": 1.5115
+          "impact": 31.6,
+          "log_shap": 2.0749
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 3.2,
-          "log_shap": 0.3242
+          "impact": 7.4,
+          "log_shap": 0.4829
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.8,
-          "log_shap": 0.178
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.2,
+          "log_shap": 0.2123
         }
       ]
     },
@@ -42,28 +42,28 @@
       "division": "Chattogram",
       "lat": 22.2,
       "lon": 92.22,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 15.0,
-      "pred_gbm": 15.3,
-      "pred_persist": 15.0,
-      "pred_blend": 15.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 72.0,
+      "pred_gbm": 57.3,
+      "pred_persist": 72.0,
+      "pred_blend": 64.6,
+      "risk_level": "medium",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.5,
-          "log_shap": 0.6964
+          "impact": 15.4,
+          "log_shap": 1.6511
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.0,
-          "log_shap": 0.2782
+          "impact": 3.5,
+          "log_shap": 0.3799
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6,
-          "log_shap": -0.1629
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.8,
+          "log_shap": 0.1885
         }
       ]
     },
@@ -72,28 +72,28 @@
       "division": "Barishal",
       "lat": 22.6,
       "lon": 90.13,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 39.0,
-      "pred_gbm": 51.4,
-      "pred_persist": 39.0,
-      "pred_blend": 45.2,
-      "risk_level": "medium",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 220.0,
+      "pred_gbm": 182.9,
+      "pred_persist": 220.0,
+      "pred_blend": 201.5,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 11.6,
-          "log_shap": 1.394
+          "impact": 56.5,
+          "log_shap": 2.4779
         },
         {
-          "label": "৩ বছরের গড় কেস (বাড়িয়েছে)",
-          "impact": 2.8,
-          "log_shap": 0.3354
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 9.9,
+          "log_shap": 0.4335
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.5,
-          "log_shap": 0.1818
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.8,
+          "log_shap": 0.2538
         }
       ]
     },
@@ -102,28 +102,28 @@
       "division": "Barishal",
       "lat": 22.7,
       "lon": 90.37,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 37.0,
-      "pred_gbm": 48.6,
-      "pred_persist": 37.0,
-      "pred_blend": 42.8,
-      "risk_level": "medium",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 386.0,
+      "pred_gbm": 323.6,
+      "pred_persist": 386.0,
+      "pred_blend": 354.8,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 11.5,
-          "log_shap": 1.328
+          "impact": 100.9,
+          "log_shap": 2.8058
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 2.0,
-          "log_shap": 0.2305
+          "impact": 15.4,
+          "log_shap": 0.4278
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.8,
-          "log_shap": 0.2059
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 10.4,
+          "log_shap": 0.2887
         }
       ]
     },
@@ -132,28 +132,28 @@
       "division": "Barishal",
       "lat": 22.68,
       "lon": 90.65,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 9.0,
-      "pred_gbm": 8.7,
-      "pred_persist": 9.0,
-      "pred_blend": 8.9,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 80.0,
+      "pred_gbm": 71.4,
+      "pred_persist": 80.0,
+      "pred_blend": 75.7,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.6,
-          "log_shap": 0.2255
-        },
-        {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.5,
-          "log_shap": 0.1855
+          "impact": 20.9,
+          "log_shap": 1.7399
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5,
-          "log_shap": -0.1758
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 4.7,
+          "log_shap": 0.3945
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.2,
+          "log_shap": 0.1821
         }
       ]
     },
@@ -162,28 +162,28 @@
       "division": "Rajshahi",
       "lat": 24.85,
       "lon": 89.37,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 10.0,
-      "pred_gbm": 8.4,
-      "pred_persist": 10.0,
-      "pred_blend": 9.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 231.0,
+      "pred_gbm": 184.6,
+      "pred_persist": 231.0,
+      "pred_blend": 207.8,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.9,
-          "log_shap": 0.2931
+          "impact": 56.7,
+          "log_shap": 2.5117
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5,
-          "log_shap": -0.1676
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 10.4,
+          "log_shap": 0.4605
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.4,
-          "log_shap": 0.1273
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.7,
+          "log_shap": 0.252
         }
       ]
     },
@@ -192,28 +192,28 @@
       "division": "Chattogram",
       "lat": 23.96,
       "lon": 91.11,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.8,
-      "pred_persist": 1.0,
-      "pred_blend": 0.9,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 94.0,
+      "pred_gbm": 72.3,
+      "pred_persist": 94.0,
+      "pred_blend": 83.1,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.7412
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 21.1,
+          "log_shap": 1.8544
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1051
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 4.4,
+          "log_shap": 0.386
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0901
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.0,
+          "log_shap": 0.1786
         }
       ]
     },
@@ -222,28 +222,28 @@
       "division": "Chattogram",
       "lat": 23.23,
       "lon": 90.65,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 8.0,
-      "pred_gbm": 4.5,
-      "pred_persist": 8.0,
-      "pred_blend": 6.3,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 192.0,
+      "pred_gbm": 183.6,
+      "pred_persist": 192.0,
+      "pred_blend": 187.8,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.3,
-          "log_shap": 0.158
+          "impact": 55.9,
+          "log_shap": 2.4022
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.157
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 11.2,
+          "log_shap": 0.4803
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.2,
-          "log_shap": 0.0956
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.5,
+          "log_shap": 0.2365
         }
       ]
     },
@@ -252,28 +252,28 @@
       "division": "Rajshahi",
       "lat": 24.6,
       "lon": 88.27,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.5,
-      "pred_persist": 1.0,
-      "pred_blend": 0.7,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 329.0,
+      "pred_gbm": 272.4,
+      "pred_persist": 329.0,
+      "pred_blend": 300.7,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.7988
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 85.3,
+          "log_shap": 2.7114
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1381
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 15.7,
+          "log_shap": 0.4985
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0957
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 9.3,
+          "log_shap": 0.2962
         }
       ]
     },
@@ -282,28 +282,28 @@
       "division": "Chattogram",
       "lat": 22.36,
       "lon": 91.78,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 51.0,
-      "pred_gbm": 72.2,
-      "pred_persist": 51.0,
-      "pred_blend": 61.6,
-      "risk_level": "medium",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 504.0,
+      "pred_gbm": 413.6,
+      "pred_persist": 504.0,
+      "pred_blend": 458.8,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 16.6,
-          "log_shap": 1.4352
+          "impact": 130.9,
+          "log_shap": 3.0311
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 2.7,
-          "log_shap": 0.2306
+          "impact": 17.5,
+          "log_shap": 0.4061
         },
         {
-          "label": "জেলার জনসংখ্যা (log_pop) (বাড়িয়েছে)",
-          "impact": 2.5,
-          "log_shap": 0.2118
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 12.7,
+          "log_shap": 0.2946
         }
       ]
     },
@@ -312,28 +312,28 @@
       "division": "Khulna",
       "lat": 23.64,
       "lon": 88.88,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 2.0,
-      "pred_gbm": 1.2,
-      "pred_persist": 2.0,
-      "pred_blend": 1.6,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 19.0,
+      "pred_gbm": 21.1,
+      "pred_persist": 19.0,
+      "pred_blend": 20.1,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.6097
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 4.0,
+          "log_shap": 0.7894
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1235
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.0,
+          "log_shap": 0.3861
         },
         {
-          "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.081
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.6,
+          "log_shap": 0.1114
         }
       ]
     },
@@ -342,28 +342,28 @@
       "division": "Chattogram",
       "lat": 21.44,
       "lon": 92.01,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 6.0,
-      "pred_gbm": 14.8,
-      "pred_persist": 6.0,
-      "pred_blend": 10.4,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 240.0,
+      "pred_gbm": 195.3,
+      "pred_persist": 240.0,
+      "pred_blend": 217.6,
+      "risk_level": "high",
       "reasons": [
         {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 60.2,
+          "log_shap": 2.5465
+        },
+        {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.2,
-          "log_shap": 0.2892
+          "impact": 10.0,
+          "log_shap": 0.4251
         },
         {
-          "label": "latitude (বাড়িয়েছে)",
-          "impact": 0.9,
-          "log_shap": 0.2311
-        },
-        {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.6,
-          "log_shap": 0.1417
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 6.1,
+          "log_shap": 0.2594
         }
       ]
     },
@@ -372,28 +372,28 @@
       "division": "Chattogram",
       "lat": 23.46,
       "lon": 91.18,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 16.0,
-      "pred_gbm": 14.3,
-      "pred_persist": 16.0,
-      "pred_blend": 15.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 215.0,
+      "pred_gbm": 195.6,
+      "pred_persist": 215.0,
+      "pred_blend": 205.3,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.3,
-          "log_shap": 0.6006
+          "impact": 59.4,
+          "log_shap": 2.4538
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.7,
-          "log_shap": 0.1826
+          "impact": 10.0,
+          "log_shap": 0.4135
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6,
-          "log_shap": -0.1657
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 6.0,
+          "log_shap": 0.2461
         }
       ]
     },
@@ -402,28 +402,28 @@
       "division": "Dhaka",
       "lat": 23.81,
       "lon": 90.41,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 268.0,
-      "pred_gbm": 245.9,
-      "pred_persist": 268.0,
-      "pred_blend": 256.9,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 2504.0,
+      "pred_gbm": 2763.7,
+      "pred_persist": 2504.0,
+      "pred_blend": 2633.9,
       "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 66.4,
-          "log_shap": 2.5213
+          "impact": 903.1,
+          "log_shap": 4.4518
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 10.2,
-          "log_shap": 0.3862
+          "impact": 111.1,
+          "log_shap": 0.5478
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
-          "impact": 6.6,
-          "log_shap": 0.252
+          "impact": 93.1,
+          "log_shap": 0.4589
         }
       ]
     },
@@ -432,28 +432,28 @@
       "division": "Rangpur",
       "lat": 25.62,
       "lon": 88.64,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.3,
-      "pred_persist": 0.0,
-      "pred_blend": 0.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 122.0,
+      "pred_gbm": 64.0,
+      "pred_persist": 122.0,
+      "pred_blend": 93.0,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -1.0334
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 19.9,
+          "log_shap": 2.0052
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.139
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.6,
+          "log_shap": 0.2641
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1138
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.2,
+          "log_shap": 0.2196
         }
       ]
     },
@@ -462,28 +462,28 @@
       "division": "Dhaka",
       "lat": 23.6,
       "lon": 89.83,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 5.0,
-      "pred_gbm": 2.1,
-      "pred_persist": 5.0,
-      "pred_blend": 3.5,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 409.0,
+      "pred_gbm": 249.0,
+      "pred_persist": 409.0,
+      "pred_blend": 329.0,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.2252
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 75.0,
+          "log_shap": 2.7687
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1146
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 12.5,
+          "log_shap": 0.4611
         },
         {
-          "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1118
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 7.8,
+          "log_shap": 0.2884
         }
       ]
     },
@@ -492,28 +492,28 @@
       "division": "Chattogram",
       "lat": 23.02,
       "lon": 91.4,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 3.0,
-      "pred_gbm": 3.1,
-      "pred_persist": 3.0,
-      "pred_blend": 3.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 121.0,
+      "pred_gbm": 91.3,
+      "pred_persist": 121.0,
+      "pred_blend": 106.2,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.4,
-          "log_shap": -0.3565
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 27.0,
+          "log_shap": 1.993
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.2,
-          "log_shap": 0.1638
+          "impact": 5.9,
+          "log_shap": 0.4375
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1267
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.8,
+          "log_shap": 0.2052
         }
       ]
     },
@@ -522,28 +522,28 @@
       "division": "Rangpur",
       "lat": 25.33,
       "lon": 89.55,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.1,
-      "pred_persist": 0.0,
-      "pred_blend": 0.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 73.0,
+      "pred_gbm": 42.7,
+      "pred_persist": 73.0,
+      "pred_blend": 57.9,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0307
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 12.1,
+          "log_shap": 1.6149
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1427
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.1,
+          "log_shap": 0.2846
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1096
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.4,
+          "log_shap": 0.184
         }
       ]
     },
@@ -552,28 +552,28 @@
       "division": "Dhaka",
       "lat": 24.0,
       "lon": 90.42,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 12.0,
-      "pred_gbm": 16.7,
-      "pred_persist": 12.0,
-      "pred_blend": 14.3,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 636.0,
+      "pred_gbm": 527.1,
+      "pred_persist": 636.0,
+      "pred_blend": 581.6,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.0,
-          "log_shap": 0.4884
+          "impact": 164.4,
+          "log_shap": 3.1155
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.7,
-          "log_shap": 0.418
+          "impact": 23.3,
+          "log_shap": 0.4409
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6,
-          "log_shap": -0.1494
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 15.1,
+          "log_shap": 0.2871
         }
       ]
     },
@@ -582,28 +582,28 @@
       "division": "Dhaka",
       "lat": 23.01,
       "lon": 89.83,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.4,
-      "pred_persist": 1.0,
-      "pred_blend": 0.7,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 184.0,
+      "pred_gbm": 127.9,
+      "pred_persist": 184.0,
+      "pred_blend": 155.9,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.7869
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 36.8,
+          "log_shap": 2.2598
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1471
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 7.0,
+          "log_shap": 0.4291
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0948
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.3,
+          "log_shap": 0.2041
         }
       ]
     },
@@ -612,28 +612,28 @@
       "division": "Sylhet",
       "lat": 24.38,
       "lon": 91.42,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 1.6,
-      "pred_persist": 0.0,
-      "pred_blend": 0.8,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 32.0,
+      "pred_gbm": 21.8,
+      "pred_persist": 32.0,
+      "pred_blend": 26.9,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.882
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.5,
+          "log_shap": 1.1047
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.1,
-          "log_shap": 0.2732
+          "impact": 1.4,
+          "log_shap": 0.286
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0927
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.7,
+          "log_shap": 0.1324
         }
       ]
     },
@@ -642,28 +642,28 @@
       "division": "Mymensingh",
       "lat": 24.92,
       "lon": 89.94,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 2.1,
-      "pred_persist": 0.0,
-      "pred_blend": 1.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 78.0,
+      "pred_gbm": 57.3,
+      "pred_persist": 78.0,
+      "pred_blend": 67.6,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.4,
-          "log_shap": -0.8778
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 16.2,
+          "log_shap": 1.6704
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.2,
-          "log_shap": 0.4443
+          "impact": 3.4,
+          "log_shap": 0.3476
         },
         {
-          "label": "২ সপ্তাহ আগের কেসের মাত্রা (বাড়িয়েছে)",
-          "impact": 0.0,
-          "log_shap": 0.0955
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.7,
+          "log_shap": 0.1736
         }
       ]
     },
@@ -672,28 +672,28 @@
       "division": "Khulna",
       "lat": 23.17,
       "lon": 89.21,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 9.0,
-      "pred_gbm": 12.8,
-      "pred_persist": 9.0,
-      "pred_blend": 10.9,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 191.0,
+      "pred_gbm": 169.5,
+      "pred_persist": 191.0,
+      "pred_blend": 180.3,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.1,
-          "log_shap": 0.3073
-        },
-        {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.8,
-          "log_shap": 0.216
+          "impact": 51.3,
+          "log_shap": 2.3486
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.6,
-          "log_shap": 0.1625
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 9.4,
+          "log_shap": 0.4322
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.0,
+          "log_shap": 0.229
         }
       ]
     },
@@ -702,28 +702,28 @@
       "division": "Barishal",
       "lat": 22.64,
       "lon": 90.21,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 62.0,
-      "pred_gbm": 61.9,
-      "pred_persist": 62.0,
-      "pred_blend": 62.0,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 88.0,
+      "pred_gbm": 67.1,
+      "pred_persist": 88.0,
+      "pred_blend": 77.5,
       "risk_level": "medium",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 15.7,
-          "log_shap": 1.6335
+          "impact": 18.3,
+          "log_shap": 1.7875
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 3.0,
-          "log_shap": 0.3121
+          "impact": 4.4,
+          "log_shap": 0.4259
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
-          "impact": 1.8,
-          "log_shap": 0.1903
+          "impact": 1.9,
+          "log_shap": 0.1889
         }
       ]
     },
@@ -732,28 +732,28 @@
       "division": "Khulna",
       "lat": 23.54,
       "lon": 89.17,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.5,
-      "pred_persist": 1.0,
-      "pred_blend": 0.7,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 78.0,
+      "pred_gbm": 71.8,
+      "pred_persist": 78.0,
+      "pred_blend": 74.9,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.8007
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 19.7,
+          "log_shap": 1.6896
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1535
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 5.0,
+          "log_shap": 0.4306
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.102
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.1,
+          "log_shap": 0.1778
         }
       ]
     },
@@ -762,28 +762,28 @@
       "division": "Rajshahi",
       "lat": 25.1,
       "lon": 89.01,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.2,
-      "pred_persist": 0.0,
-      "pred_blend": 0.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 28.0,
+      "pred_gbm": 16.9,
+      "pred_persist": 28.0,
+      "pred_blend": 22.4,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0149
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.7,
+          "log_shap": 0.8707
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1471
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.6,
+          "log_shap": 0.1546
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.109
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.4,
+          "log_shap": 0.0995
         }
       ]
     },
@@ -792,28 +792,28 @@
       "division": "Chattogram",
       "lat": 23.12,
       "lon": 91.98,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 4.0,
-      "pred_gbm": 2.3,
-      "pred_persist": 4.0,
-      "pred_blend": 3.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 62.0,
+      "pred_gbm": 35.4,
+      "pred_persist": 62.0,
+      "pred_blend": 48.7,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.1563
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 9.6,
+          "log_shap": 1.4714
         },
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.128
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.9,
+          "log_shap": 0.2911
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1266
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.2,
+          "log_shap": 0.1772
         }
       ]
     },
@@ -822,28 +822,28 @@
       "division": "Khulna",
       "lat": 22.85,
       "lon": 89.54,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 18.0,
-      "pred_gbm": 20.5,
-      "pred_persist": 18.0,
-      "pred_blend": 19.3,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 676.0,
+      "pred_gbm": 562.7,
+      "pred_persist": 676.0,
+      "pred_blend": 619.3,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 3.7,
-          "log_shap": 0.7429
+          "impact": 180.3,
+          "log_shap": 3.2009
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.2,
-          "log_shap": 0.2312
+          "impact": 27.0,
+          "log_shap": 0.4801
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.8,
-          "log_shap": -0.1601
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 17.3,
+          "log_shap": 0.3076
         }
       ]
     },
@@ -852,28 +852,28 @@
       "division": "Dhaka",
       "lat": 24.43,
       "lon": 90.78,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 2.0,
-      "pred_gbm": 2.1,
-      "pred_persist": 2.0,
-      "pred_blend": 2.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 167.0,
+      "pred_gbm": 130.9,
+      "pred_persist": 167.0,
+      "pred_blend": 149.0,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.5296
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 36.9,
+          "log_shap": 2.1577
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.2,
-          "log_shap": 0.2545
+          "impact": 7.8,
+          "log_shap": 0.4535
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.127
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 3.6,
+          "log_shap": 0.2093
         }
       ]
     },
@@ -882,28 +882,28 @@
       "division": "Rangpur",
       "lat": 25.81,
       "lon": 89.65,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.1,
-      "pred_persist": 0.0,
-      "pred_blend": 0.0,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 9.0,
+      "pred_gbm": 6.2,
+      "pred_persist": 9.0,
+      "pred_blend": 7.6,
       "risk_level": "low",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0247
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.8,
+          "log_shap": 0.3539
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3,
+          "log_shap": -0.1189
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1449
-        },
-        {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1085
+          "impact": 0.2,
+          "log_shap": -0.0977
         }
       ]
     },
@@ -912,28 +912,28 @@
       "division": "Khulna",
       "lat": 23.9,
       "lon": 89.12,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.9,
-      "pred_persist": 0.0,
-      "pred_blend": 0.5,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 111.0,
+      "pred_gbm": 102.9,
+      "pred_persist": 111.0,
+      "pred_blend": 106.9,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.9507
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 30.4,
+          "log_shap": 1.971
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1015
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 6.4,
+          "log_shap": 0.4146
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0909
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.1,
+          "log_shap": 0.2031
         }
       ]
     },
@@ -942,28 +942,28 @@
       "division": "Chattogram",
       "lat": 22.94,
       "lon": 90.83,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 1.3,
-      "pred_persist": 1.0,
-      "pred_blend": 1.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 66.0,
+      "pred_gbm": 38.1,
+      "pred_persist": 66.0,
+      "pred_blend": 52.0,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.7424
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 11.1,
+          "log_shap": 1.525
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1293
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.8,
+          "log_shap": 0.249
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.095
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.4,
+          "log_shap": 0.1883
         }
       ]
     },
@@ -972,28 +972,28 @@
       "division": "Rangpur",
       "lat": 25.91,
       "lon": 89.45,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.2,
-      "pred_persist": 0.0,
-      "pred_blend": 0.1,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 22.0,
+      "pred_gbm": 16.0,
+      "pred_persist": 22.0,
+      "pred_blend": 19.0,
       "risk_level": "low",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0195
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.0,
+          "log_shap": 0.8039
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1483
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.3,
+          "log_shap": 0.34
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1082
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.5,
+          "log_shap": 0.1252
         }
       ]
     },
@@ -1002,28 +1002,28 @@
       "division": "Dhaka",
       "lat": 23.16,
       "lon": 90.21,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 10.0,
-      "pred_gbm": 9.2,
-      "pred_persist": 10.0,
-      "pred_blend": 9.6,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 173.0,
+      "pred_gbm": 133.0,
+      "pred_persist": 173.0,
+      "pred_blend": 153.0,
+      "risk_level": "high",
       "reasons": [
         {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 38.0,
+          "log_shap": 2.1648
+        },
+        {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.7,
-          "log_shap": 0.2464
+          "impact": 6.9,
+          "log_shap": 0.3911
         },
         {
-          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.5,
-          "log_shap": 0.1775
-        },
-        {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5,
-          "log_shap": -0.1758
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.6,
+          "log_shap": 0.2073
         }
       ]
     },
@@ -1032,28 +1032,28 @@
       "division": "Khulna",
       "lat": 23.49,
       "lon": 89.42,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 12.0,
-      "pred_gbm": 10.3,
-      "pred_persist": 12.0,
-      "pred_blend": 11.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 53.0,
+      "pred_gbm": 29.8,
+      "pred_persist": 53.0,
+      "pred_blend": 41.4,
+      "risk_level": "medium",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 1.1,
-          "log_shap": 0.3501
+          "impact": 8.0,
+          "log_shap": 1.3431
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.9,
-          "log_shap": 0.2858
+          "impact": 1.7,
+          "log_shap": 0.2826
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5,
-          "log_shap": -0.1638
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.8,
+          "log_shap": 0.1375
         }
       ]
     },
@@ -1062,28 +1062,28 @@
       "division": "Dhaka",
       "lat": 23.86,
       "lon": 90.0,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 17.0,
-      "pred_gbm": 9.8,
-      "pred_persist": 17.0,
-      "pred_blend": 13.4,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 274.0,
+      "pred_gbm": 228.0,
+      "pred_persist": 274.0,
+      "pred_blend": 251.0,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.2,
-          "log_shap": 0.7996
+          "impact": 66.0,
+          "log_shap": 2.4338
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5,
-          "log_shap": -0.1677
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 12.5,
+          "log_shap": 0.4616
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.2,
-          "log_shap": 0.0887
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 6.3,
+          "log_shap": 0.2335
         }
       ]
     },
@@ -1092,28 +1092,28 @@
       "division": "Khulna",
       "lat": 23.76,
       "lon": 88.63,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 7.0,
-      "pred_gbm": 5.4,
-      "pred_persist": 7.0,
-      "pred_blend": 6.2,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 77.0,
+      "pred_gbm": 54.6,
+      "pred_persist": 77.0,
+      "pred_blend": 65.8,
+      "risk_level": "medium",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.5,
-          "log_shap": 0.2571
+          "impact": 14.5,
+          "log_shap": 1.609
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.1761
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 3.4,
+          "log_shap": 0.3794
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.1244
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.6,
+          "log_shap": 0.1813
         }
       ]
     },
@@ -1122,28 +1122,28 @@
       "division": "Sylhet",
       "lat": 24.48,
       "lon": 91.77,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
       "actual_cases": 1.0,
-      "pred_gbm": 0.4,
+      "pred_gbm": 2.2,
       "pred_persist": 1.0,
-      "pred_blend": 0.7,
+      "pred_blend": 1.6,
       "risk_level": "low",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.4,
+          "log_shap": -0.6773
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.2,
+          "log_shap": 0.3004
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
           "impact": 0.1,
-          "log_shap": -0.802
-        },
-        {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1395
-        },
-        {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0918
+          "log_shap": -0.1013
         }
       ]
     },
@@ -1152,28 +1152,28 @@
       "division": "Dhaka",
       "lat": 23.54,
       "lon": 90.53,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 29.0,
-      "pred_gbm": 23.8,
-      "pred_persist": 29.0,
-      "pred_blend": 26.4,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 110.0,
+      "pred_gbm": 72.4,
+      "pred_persist": 110.0,
+      "pred_blend": 91.2,
       "risk_level": "medium",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 5.7,
-          "log_shap": 1.213
+          "impact": 20.1,
+          "log_shap": 1.8247
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.5,
-          "log_shap": 0.3146
+          "impact": 3.7,
+          "log_shap": 0.3377
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.8,
-          "log_shap": 0.1726
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.0,
+          "log_shap": 0.1836
         }
       ]
     },
@@ -1182,28 +1182,28 @@
       "division": "Mymensingh",
       "lat": 24.75,
       "lon": 90.4,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 16.0,
-      "pred_gbm": 13.0,
-      "pred_persist": 16.0,
-      "pred_blend": 14.5,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 377.0,
+      "pred_gbm": 338.8,
+      "pred_persist": 377.0,
+      "pred_blend": 357.9,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.3,
-          "log_shap": 0.6309
+          "impact": 106.7,
+          "log_shap": 2.831
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6,
-          "log_shap": -0.1752
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 18.8,
+          "log_shap": 0.4979
         },
         {
-          "label": "জেলার জনসংখ্যা (log_pop) (বাড়িয়েছে)",
-          "impact": 0.6,
-          "log_shap": 0.1715
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 11.6,
+          "log_shap": 0.3086
         }
       ]
     },
@@ -1212,28 +1212,28 @@
       "division": "Rajshahi",
       "lat": 24.8,
       "lon": 88.75,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 1.0,
-      "pred_persist": 0.0,
-      "pred_blend": 0.5,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 58.0,
+      "pred_gbm": 39.9,
+      "pred_persist": 58.0,
+      "pred_blend": 48.9,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.9301
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 10.4,
+          "log_shap": 1.4399
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0996
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.0,
+          "log_shap": 0.2707
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0872
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.2,
+          "log_shap": 0.1633
         }
       ]
     },
@@ -1242,28 +1242,28 @@
       "division": "Khulna",
       "lat": 23.17,
       "lon": 89.51,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 9.0,
-      "pred_gbm": 9.0,
-      "pred_persist": 9.0,
-      "pred_blend": 9.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 34.0,
+      "pred_gbm": 31.4,
+      "pred_persist": 34.0,
+      "pred_blend": 32.7,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6,
-          "log_shap": -0.1616
-        },
-        {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.5,
-          "log_shap": 0.1509
+          "impact": 7.2,
+          "log_shap": 1.0988
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.5,
-          "log_shap": 0.1414
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.3,
+          "log_shap": 0.3489
+        },
+        {
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.0,
+          "log_shap": 0.1587
         }
       ]
     },
@@ -1272,28 +1272,28 @@
       "division": "Dhaka",
       "lat": 23.62,
       "lon": 90.5,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 3.0,
-      "pred_gbm": 1.2,
-      "pred_persist": 3.0,
-      "pred_blend": 2.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 278.0,
+      "pred_gbm": 234.3,
+      "pred_persist": 278.0,
+      "pred_blend": 256.2,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.2455
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 68.3,
+          "log_shap": 2.4779
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.228
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 12.9,
+          "log_shap": 0.4662
         },
         {
-          "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1232
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 7.0,
+          "log_shap": 0.2553
         }
       ]
     },
@@ -1302,28 +1302,28 @@
       "division": "Dhaka",
       "lat": 23.92,
       "lon": 90.72,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 14.0,
-      "pred_gbm": 8.3,
-      "pred_persist": 14.0,
-      "pred_blend": 11.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 202.0,
+      "pred_gbm": 185.9,
+      "pred_persist": 202.0,
+      "pred_blend": 194.0,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 1.5,
-          "log_shap": 0.5714
-        },
-        {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5,
-          "log_shap": -0.1831
+          "impact": 53.9,
+          "log_shap": 2.3308
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.4,
-          "log_shap": 0.1384
+          "impact": 10.7,
+          "log_shap": 0.4631
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.0,
+          "log_shap": 0.216
         }
       ]
     },
@@ -1332,28 +1332,28 @@
       "division": "Rajshahi",
       "lat": 24.41,
       "lon": 88.98,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 2.0,
-      "pred_gbm": 0.8,
-      "pred_persist": 2.0,
-      "pred_blend": 1.4,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 37.0,
+      "pred_gbm": 32.1,
+      "pred_persist": 37.0,
+      "pred_blend": 34.6,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.6337
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 7.8,
+          "log_shap": 1.1655
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.184
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.8,
+          "log_shap": 0.2676
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0924
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.8,
+          "log_shap": 0.1204
         }
       ]
     },
@@ -1362,28 +1362,28 @@
       "division": "Mymensingh",
       "lat": 24.88,
       "lon": 90.73,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.7,
-      "pred_persist": 1.0,
-      "pred_blend": 0.9,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 51.0,
+      "pred_gbm": 45.3,
+      "pred_persist": 51.0,
+      "pred_blend": 48.1,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.7884
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 11.6,
+          "log_shap": 1.4154
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1035
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 3.4,
+          "log_shap": 0.4086
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0906
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.1,
+          "log_shap": 0.1376
         }
       ]
     },
@@ -1392,28 +1392,28 @@
       "division": "Rangpur",
       "lat": 25.93,
       "lon": 88.85,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.2,
-      "pred_persist": 0.0,
-      "pred_blend": 0.1,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 16.0,
+      "pred_gbm": 14.2,
+      "pred_persist": 16.0,
+      "pred_blend": 15.1,
       "risk_level": "low",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0284
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.6,
+          "log_shap": 0.7571
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1487
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.4,
+          "log_shap": 0.4061
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1079
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3,
+          "log_shap": -0.1007
         }
       ]
     },
@@ -1422,28 +1422,28 @@
       "division": "Chattogram",
       "lat": 22.82,
       "lon": 91.1,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 7.0,
-      "pred_gbm": 5.2,
-      "pred_persist": 7.0,
-      "pred_blend": 6.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 172.0,
+      "pred_gbm": 120.5,
+      "pred_persist": 172.0,
+      "pred_blend": 146.3,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.3,
-          "log_shap": 0.1913
+          "impact": 36.7,
+          "log_shap": 2.2588
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.1411
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 7.0,
+          "log_shap": 0.4292
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.2,
-          "log_shap": 0.1312
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 3.7,
+          "log_shap": 0.2288
         }
       ]
     },
@@ -1452,28 +1452,28 @@
       "division": "Rajshahi",
       "lat": 24.01,
       "lon": 89.24,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 2.0,
-      "pred_gbm": 1.0,
-      "pred_persist": 2.0,
-      "pred_blend": 1.5,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 73.0,
+      "pred_gbm": 72.7,
+      "pred_persist": 73.0,
+      "pred_blend": 72.9,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.5961
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 19.6,
+          "log_shap": 1.632
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1693
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 4.8,
+          "log_shap": 0.402
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.12
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.1,
+          "log_shap": 0.1785
         }
       ]
     },
@@ -1482,28 +1482,28 @@
       "division": "Rangpur",
       "lat": 26.34,
       "lon": 88.56,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.0,
-      "pred_persist": 0.0,
-      "pred_blend": 0.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 70.0,
+      "pred_gbm": 28.2,
+      "pred_persist": 70.0,
+      "pred_blend": 49.1,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0209
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 8.0,
+          "log_shap": 1.65
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1411
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.6,
+          "log_shap": 0.3375
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1043
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.0,
+          "log_shap": 0.1977
         }
       ]
     },
@@ -1512,28 +1512,28 @@
       "division": "Barishal",
       "lat": 22.36,
       "lon": 90.33,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 25.0,
-      "pred_gbm": 24.8,
-      "pred_persist": 25.0,
-      "pred_blend": 24.9,
-      "risk_level": "medium",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 300.0,
+      "pred_gbm": 202.9,
+      "pred_persist": 300.0,
+      "pred_blend": 251.5,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 4.7,
-          "log_shap": 0.9156
+          "impact": 63.1,
+          "log_shap": 2.5917
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.4,
-          "log_shap": 0.2678
+          "impact": 10.2,
+          "log_shap": 0.421
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.0,
-          "log_shap": 0.1884
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 6.5,
+          "log_shap": 0.2682
         }
       ]
     },
@@ -1542,28 +1542,28 @@
       "division": "Barishal",
       "lat": 22.58,
       "lon": 89.98,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 81.0,
-      "pred_gbm": 113.7,
-      "pred_persist": 81.0,
-      "pred_blend": 97.4,
-      "risk_level": "medium",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 383.0,
+      "pred_gbm": 292.6,
+      "pred_persist": 383.0,
+      "pred_blend": 337.8,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 29.5,
-          "log_shap": 1.88
+          "impact": 92.6,
+          "log_shap": 2.8368
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 5.7,
-          "log_shap": 0.3607
+          "impact": 16.6,
+          "log_shap": 0.5094
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
-          "impact": 3.2,
-          "log_shap": 0.2025
+          "impact": 9.9,
+          "log_shap": 0.3044
         }
       ]
     },
@@ -1572,28 +1572,28 @@
       "division": "Dhaka",
       "lat": 23.76,
       "lon": 89.64,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.6,
-      "pred_persist": 1.0,
-      "pred_blend": 0.8,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 57.0,
+      "pred_gbm": 47.7,
+      "pred_persist": 57.0,
+      "pred_blend": 52.4,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.7937
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 11.6,
+          "log_shap": 1.3981
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0975
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.5,
+          "log_shap": 0.2965
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0897
+          "label": "বিভাগের গত সপ্তাহের কেস (বাড়িয়েছে)",
+          "impact": 1.3,
+          "log_shap": 0.1577
         }
       ]
     },
@@ -1602,28 +1602,28 @@
       "division": "Rajshahi",
       "lat": 24.37,
       "lon": 88.6,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 9.0,
-      "pred_gbm": 7.1,
-      "pred_persist": 9.0,
-      "pred_blend": 8.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 293.0,
+      "pred_gbm": 262.7,
+      "pred_persist": 293.0,
+      "pred_blend": 277.9,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.6,
-          "log_shap": 0.2377
+          "impact": 79.2,
+          "log_shap": 2.57
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.143
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 14.5,
+          "log_shap": 0.4699
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.3,
-          "log_shap": 0.115
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 8.3,
+          "log_shap": 0.2706
         }
       ]
     },
@@ -1632,28 +1632,28 @@
       "division": "Chattogram",
       "lat": 22.65,
       "lon": 92.18,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 4.0,
-      "pred_gbm": 2.0,
-      "pred_persist": 4.0,
-      "pred_blend": 3.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 73.0,
+      "pred_gbm": 37.9,
+      "pred_persist": 73.0,
+      "pred_blend": 55.5,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.2086
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 10.3,
+          "log_shap": 1.6465
         },
         {
-          "label": "জেলার জনসংখ্যা (log_pop) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1287
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.8,
+          "log_shap": 0.2911
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1178
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.1,
+          "log_shap": 0.177
         }
       ]
     },
@@ -1662,28 +1662,28 @@
       "division": "Rangpur",
       "lat": 25.74,
       "lon": 89.28,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 1.0,
-      "pred_gbm": 0.7,
-      "pred_persist": 1.0,
-      "pred_blend": 0.9,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 194.0,
+      "pred_gbm": 116.4,
+      "pred_persist": 194.0,
+      "pred_blend": 155.2,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.7854
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 36.6,
+          "log_shap": 2.4182
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1458
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 6.4,
+          "log_shap": 0.4224
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.0933
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.7,
+          "log_shap": 0.2448
         }
       ]
     },
@@ -1692,28 +1692,28 @@
       "division": "Khulna",
       "lat": 22.72,
       "lon": 89.08,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 4.0,
-      "pred_gbm": 2.6,
-      "pred_persist": 4.0,
-      "pred_blend": 3.3,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 116.0,
+      "pred_gbm": 95.2,
+      "pred_persist": 116.0,
+      "pred_blend": 105.6,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2,
-          "log_shap": -0.1567
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 28.4,
+          "log_shap": 2.0016
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1295
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 5.8,
+          "log_shap": 0.4065
         },
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1042
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.9,
+          "log_shap": 0.2056
         }
       ]
     },
@@ -1722,28 +1722,28 @@
       "division": "Dhaka",
       "lat": 23.21,
       "lon": 90.35,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.0,
-      "pred_persist": 0.0,
-      "pred_blend": 0.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 60.0,
+      "pred_gbm": 36.7,
+      "pred_persist": 60.0,
+      "pred_blend": 48.3,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0042
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 9.4,
+          "log_shap": 1.4263
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1442
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.1,
+          "log_shap": 0.1744
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1051
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.1,
+          "log_shap": 0.1661
         }
       ]
     },
@@ -1752,28 +1752,28 @@
       "division": "Mymensingh",
       "lat": 25.02,
       "lon": 90.02,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 5.0,
-      "pred_gbm": 1.8,
-      "pred_persist": 5.0,
-      "pred_blend": 3.4,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 56.0,
+      "pred_gbm": 35.5,
+      "pred_persist": 56.0,
+      "pred_blend": 45.8,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1683
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 9.2,
+          "log_shap": 1.3883
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1326
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.1,
+          "log_shap": 0.3105
         },
         {
-          "label": "জেলার জনসংখ্যা (log_pop) (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1061
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.9,
+          "log_shap": 0.1322
         }
       ]
     },
@@ -1782,28 +1782,28 @@
       "division": "Rajshahi",
       "lat": 24.45,
       "lon": 89.71,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 7.0,
-      "pred_gbm": 5.9,
-      "pred_persist": 7.0,
-      "pred_blend": 6.4,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 226.0,
+      "pred_gbm": 189.7,
+      "pred_persist": 226.0,
+      "pred_blend": 207.8,
+      "risk_level": "high",
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.4,
-          "log_shap": 0.1798
+          "impact": 58.5,
+          "log_shap": 2.4702
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.1412
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 10.1,
+          "log_shap": 0.425
         },
         {
-          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.3,
-          "log_shap": 0.1359
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.9,
+          "log_shap": 0.2492
         }
       ]
     },
@@ -1812,28 +1812,28 @@
       "division": "Sylhet",
       "lat": 25.07,
       "lon": 91.4,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.1,
-      "pred_persist": 0.0,
-      "pred_blend": 0.1,
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 20.0,
+      "pred_gbm": 9.5,
+      "pred_persist": 20.0,
+      "pred_blend": 14.8,
       "risk_level": "low",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.9878
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.9,
+          "log_shap": 0.673
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1278
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.7,
+          "log_shap": 0.2401
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1083
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3,
+          "log_shap": -0.1004
         }
       ]
     },
@@ -1842,28 +1842,28 @@
       "division": "Sylhet",
       "lat": 24.9,
       "lon": 91.87,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 2.0,
-      "pred_gbm": 4.1,
-      "pred_persist": 2.0,
-      "pred_blend": 3.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 45.0,
+      "pred_gbm": 33.8,
+      "pred_persist": 45.0,
+      "pred_blend": 39.4,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.4,
-          "log_shap": -0.4506
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 8.8,
+          "log_shap": 1.2869
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.3,
-          "log_shap": 0.3476
+          "impact": 2.3,
+          "log_shap": 0.3282
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1157
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.0,
+          "log_shap": 0.1424
         }
       ]
     },
@@ -1872,28 +1872,28 @@
       "division": "Dhaka",
       "lat": 24.25,
       "lon": 89.92,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 2.0,
-      "pred_gbm": 2.1,
-      "pred_persist": 2.0,
-      "pred_blend": 2.1,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 313.0,
+      "pred_gbm": 184.5,
+      "pred_persist": 313.0,
+      "pred_blend": 248.7,
+      "risk_level": "high",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3,
-          "log_shap": -0.5116
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 54.2,
+          "log_shap": 2.5006
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.1,
-          "log_shap": 0.1991
+          "impact": 9.2,
+          "log_shap": 0.4253
         },
         {
-          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1,
-          "log_shap": -0.1196
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.3,
+          "log_shap": 0.2436
         }
       ]
     },
@@ -1902,28 +1902,28 @@
       "division": "Rangpur",
       "lat": 26.03,
       "lon": 88.45,
-      "week_start": "2026-06-29",
-      "actual_week": "2026-06-22",
-      "actual_cases": 0.0,
-      "pred_gbm": 0.1,
-      "pred_persist": 0.0,
-      "pred_blend": 0.0,
-      "risk_level": "low",
+      "week_start": "2026-11-16",
+      "actual_week": "2026-11-09",
+      "actual_cases": 30.0,
+      "pred_gbm": 17.3,
+      "pred_persist": 30.0,
+      "pred_blend": 23.6,
+      "risk_level": "medium",
       "reasons": [
         {
-          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -1.0181
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 4.0,
+          "log_shap": 0.9516
         },
         {
-          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1456
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.9,
+          "log_shap": 0.215
         },
         {
-          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0,
-          "log_shap": -0.1083
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.6,
+          "log_shap": 0.1411
         }
       ]
     }

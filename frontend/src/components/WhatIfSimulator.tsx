@@ -55,7 +55,7 @@ export default function WhatIfSimulator({
               : "bg-amber-500/15 text-amber-300"
           }`}
         >
-          {isLiveApi ? "লাইভ API যুক্ত" : "লাইভ API প্রয়োজন"}
+          সেন্সিটিভিটি সিমুলেশন — আসল মডেল চালায় না, প্রি-কম্পিউটেড পূর্বাভাসের ওপর অনুমান করে
         </span>
       </div>
 

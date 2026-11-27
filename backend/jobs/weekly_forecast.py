@@ -22,7 +22,10 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = BACKEND_DIR.parent / "data"
 sys.path.insert(0, str(BACKEND_DIR))
 
+from jobs.build_weekly_panel import build_weekly_panel
 from predict_blend import FEATS
+
+assert len(FEATS) == 43, f"Expected 43 features in FEATS, got {len(FEATS)}"
 
 MODEL_PATH = BACKEND_DIR / "model" / "gbm_transfer_model.txt"
 PANEL_PATH = DATA_DIR / "panel_district_stage1.csv"
@@ -80,6 +83,7 @@ def classify_risk(pred_cases: float) -> str:
 
 
 def run_weekly_forecast() -> dict[str, Any]:
+    build_weekly_panel()
     panel = pd.read_csv(PANEL_PATH, parse_dates=["week_start"])
     panel["division"] = panel["division"].astype("category")
     for c in [

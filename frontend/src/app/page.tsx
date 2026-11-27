@@ -199,6 +199,13 @@ export default function HomePage() {
     );
   }
 
+  const dataAsOf = summary.data_as_of ?? summary.latest_observed_week;
+  const dataAgeDays = Math.max(
+    0,
+    Math.floor((Date.now() - Date.parse(`${dataAsOf}T00:00:00Z`)) / 86400000)
+  );
+  const isStaleData = Number.isFinite(dataAgeDays) && dataAgeDays > 3;
+
   const tickerText = `Last observed week: ${summary.latest_observed_week} (আসল কেস ${Math.round(
     summary.national_actual_latest_week
   ).toLocaleString()}) | Forecast week: ${summary.latest_week} (built from data up to ${
@@ -283,7 +290,7 @@ export default function HomePage() {
             </button>
           </nav>
 
-          <div className="flex items-center gap-2">
+          <div className="flex flex-wrap items-center gap-2">
             <span
               className={`rounded-full border px-2.5 py-1 text-[11px] font-medium ${
                 isLiveApi
@@ -296,6 +303,18 @@ export default function HomePage() {
                 : lang === "bn"
                   ? "● অফলাইন স্ন্যাপশট"
                   : "● Offline Snapshot"}
+            </span>
+            <span
+              className={`rounded-full border px-2.5 py-1 text-[11px] font-medium ${
+                isStaleData
+                  ? "border-amber-500/50 bg-amber-500/15 text-amber-300"
+                  : "border-slate-700 bg-slate-900 text-slate-300"
+              }`}
+              title={`Data as of: ${dataAsOf}`}
+            >
+              {isStaleData
+                ? `Data as of: ${dataAsOf} (Data is ${dataAgeDays} days old — showing last available)`
+                : `Data as of: ${dataAsOf}`}
             </span>
             <button
               type="button"

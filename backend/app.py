@@ -1,33 +1,43 @@
 """
 FastAPI backend for Dengue Outbreak Forecasting (64 Districts, 1-week ahead).
-Loads gbm_transfer_model.txt once at startup and serves predictions, division
-aggregations, 2025 timeseries, top-10 risk districts, and what-if simulation.
+- Step 1: Reads precomputed weekly forecasts from data/forecasts_latest.json (never runs model per request).
+- Step 3: 1-hour TTL in-memory cache for /predict and /top10.
+- Step 5: Rate limiting (60 req/min per IP) and structured request logging.
 """
 from __future__ import annotations
 
 import json
+import logging
 import os
+import time
+from collections import defaultdict, deque
 from functools import lru_cache
 from pathlib import Path
+from threading import Lock
 from typing import Any
 
-import lightgbm as lgb
-import numpy as np
 import pandas as pd
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, HTTPException, Query, Request
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import JSONResponse
 
-from predict_blend import FEATS
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s [%(levelname)s] %(message)s",
+)
+logger = logging.getLogger("dengue-api")
 
 BASE_DIR = Path(__file__).resolve().parent
 DATA_DIR = BASE_DIR.parent / "data"
-FRONTEND_PUBLIC_DIR = BASE_DIR.parent / "frontend" / "public"
 
-MODEL_PATH = BASE_DIR / "model" / "gbm_transfer_model.txt"
+FORECASTS_PATH = DATA_DIR / "forecasts_latest.json"
 PREDICTIONS_PATH = DATA_DIR / "predictions.csv"
 METRICS_PATH = DATA_DIR / "metrics.json"
-SHAP_PATH = DATA_DIR / "shap_values.csv"
-GEOJSON_PATH = FRONTEND_PUBLIC_DIR / "bangladesh-districts.geojson"
+LAST_UPDATED_PATH = DATA_DIR / "last_updated.json"
+
+CACHE_TTL_SECONDS = 3600  # 1 hour
+RATE_LIMIT_MAX_REQUESTS = 60
+RATE_LIMIT_WINDOW_SECONDS = 60
 
 DIVISION_NAMES_BN = {
     "Barishal": "বরিশাল",
@@ -40,16 +50,70 @@ DIVISION_NAMES_BN = {
     "Sylhet": "সিলেট",
 }
 
-RISK_THRESHOLDS = {
-    "high": 100.0,
-    "medium": 20.0,
-}
+
+class TTLCache:
+    """Thread-safe in-memory TTL cache."""
+
+    def __init__(self, ttl_seconds: int = CACHE_TTL_SECONDS) -> None:
+        self.ttl = ttl_seconds
+        self._store: dict[tuple[Any, ...], tuple[float, Any]] = {}
+        self._lock = Lock()
+
+    def get(self, key: tuple[Any, ...]) -> Any | None:
+        now = time.monotonic()
+        with self._lock:
+            entry = self._store.get(key)
+            if entry is None:
+                return None
+            expires_at, value = entry
+            if now >= expires_at:
+                del self._store[key]
+                return None
+            return value
+
+    def set(self, key: tuple[Any, ...], value: Any) -> None:
+        with self._lock:
+            self._store[key] = (time.monotonic() + self.ttl, value)
+
+    def clear(self) -> None:
+        with self._lock:
+            self._store.clear()
+
+    def size(self) -> int:
+        with self._lock:
+            return len(self._store)
+
+
+class IPRateLimiter:
+    """Sliding-window per-IP rate limiter (60 requests / 60s)."""
+
+    def __init__(
+        self,
+        max_requests: int = RATE_LIMIT_MAX_REQUESTS,
+        window_seconds: int = RATE_LIMIT_WINDOW_SECONDS,
+    ) -> None:
+        self.max_requests = max_requests
+        self.window = window_seconds
+        self._hits: dict[str, deque[float]] = defaultdict(deque)
+        self._lock = Lock()
+
+    def allow(self, client_ip: str) -> tuple[bool, int]:
+        now = time.monotonic()
+        cutoff = now - self.window
+        with self._lock:
+            q = self._hits[client_ip]
+            while q and q[0] <= cutoff:
+                q.popleft()
+            if len(q) >= self.max_requests:
+                return False, 0
+            q.append(now)
+            return True, self.max_requests - len(q)
 
 
 def classify_risk(pred_cases: float) -> str:
-    if pred_cases >= RISK_THRESHOLDS["high"]:
+    if pred_cases >= 100.0:
         return "high"
-    if pred_cases >= RISK_THRESHOLDS["medium"]:
+    if pred_cases >= 20.0:
         return "medium"
     return "low"
 
@@ -73,61 +137,53 @@ def risk_actions_bn(risk_level: str) -> list[str]:
     ]
 
 
-def _ring_centroid(coords: list[Any]) -> tuple[float, float]:
-    pts = np.asarray(coords, dtype=float)
-    return float(pts[:, 1].mean()), float(pts[:, 0].mean())
-
-
-def _feature_centroid(geometry: dict[str, Any]) -> tuple[float, float]:
-    gtype = geometry.get("type")
-    coords = geometry.get("coordinates", [])
-    if gtype == "Polygon" and coords:
-        return _ring_centroid(coords[0])
-    if gtype == "MultiPolygon" and coords:
-        largest = max(coords, key=lambda poly: len(poly[0]) if poly else 0)
-        return _ring_centroid(largest[0])
-    return 23.8103, 90.4125
-
-
 class AppState:
     def __init__(self) -> None:
-        self.booster: lgb.Booster = lgb.Booster(model_file=str(MODEL_PATH))
+        self.cache = TTLCache(CACHE_TTL_SECONDS)
+        self.rate_limiter = IPRateLimiter(
+            RATE_LIMIT_MAX_REQUESTS, RATE_LIMIT_WINDOW_SECONDS
+        )
+        self.reload()
+
+    def reload(self) -> None:
+        if not FORECASTS_PATH.exists():
+            raise RuntimeError(
+                f"Missing {FORECASTS_PATH}. Run backend/jobs/weekly_forecast.py first."
+            )
+        payload = json.loads(FORECASTS_PATH.read_text(encoding="utf-8"))
+        self.forecasts_payload: dict[str, Any] = payload
+        self.latest_week: str = str(payload["latest_week"])
+        self.latest_obs_week: str = str(payload["latest_observed_week"])
+        self.forecast_rows: list[dict[str, Any]] = list(payload["districts"])
+        self.forecast_by_district: dict[str, dict[str, Any]] = {
+            r["district"]: r for r in self.forecast_rows
+        }
+
         self.df: pd.DataFrame = pd.read_csv(PREDICTIONS_PATH)
         self.df["week_start"] = self.df["week_start"].astype(str)
+
         self.metrics: dict[str, Any] = (
             json.loads(METRICS_PATH.read_text(encoding="utf-8"))
             if METRICS_PATH.exists()
             else {}
         )
-        self.shap_df: pd.DataFrame | None = (
-            pd.read_csv(SHAP_PATH) if SHAP_PATH.exists() else None
+        self.last_updated: dict[str, Any] = (
+            json.loads(LAST_UPDATED_PATH.read_text(encoding="utf-8"))
+            if LAST_UPDATED_PATH.exists()
+            else {
+                "date": self.latest_obs_week,
+                "source": "Figshare / DGHS observed district-weekly",
+            }
         )
-        self.centroids: dict[str, tuple[float, float]] = {}
-        if GEOJSON_PATH.exists():
-            geo = json.loads(GEOJSON_PATH.read_text(encoding="utf-8"))
-            for ft in geo.get("features", []):
-                props = ft.get("properties", {})
-                dname = props.get("district")
-                if dname:
-                    self.centroids[dname] = _feature_centroid(ft.get("geometry", {}))
-
-        # Identify the latest week where predictions are present
-        valid_pred = self.df[self.df["pred_blend"].notna()]
-        self.latest_week: str = str(valid_pred["week_start"].max())
-
-        # Most recent observed (non-NaN new_cases) week strictly before latest_week
-        obs = self.df[
-            (self.df["new_cases"].notna()) & (self.df["week_start"] < self.latest_week)
-        ]
-        self.latest_obs_week: str = str(obs["week_start"].max()) if len(obs) else self.latest_week
+        self.cache.clear()
 
 
 state = AppState()
 
 app = FastAPI(
     title="Dengue Outbreak Forecasting API (64 Districts)",
-    version="1.0.0",
-    description="1-week-ahead district dengue forecasting using 0.5 * GBM-log(+transfer) + 0.5 * persistence",
+    version="2.1.0",
+    description="Scalable 1-week-ahead district dengue forecasting with precomputed JSON, 1h TTL cache, rate limiting, and logging",
 )
 
 allowed_origins_env = os.getenv(
@@ -145,74 +201,41 @@ app.add_middleware(
 )
 
 
-def _latest_district_rows() -> pd.DataFrame:
-    latest = state.df[state.df["week_start"] == state.latest_week].copy()
-    # Fill missing pred_blend on the latest week by falling back to the last valid pred_blend
-    if latest["pred_blend"].isna().any():
-        last_valid = (
-            state.df[state.df["pred_blend"].notna()]
-            .sort_values("week_start")
-            .groupby("district", as_index=False)
-            .last()
+@app.middleware("http")
+async def rate_limit_and_log(request: Request, call_next: Any) -> Any:
+    client_ip = request.client.host if request.client else "unknown"
+    allowed, remaining = state.rate_limiter.allow(client_ip)
+    if not allowed:
+        logger.warning("Rate limit exceeded ip=%s path=%s", client_ip, request.url.path)
+        return JSONResponse(
+            status_code=429,
+            content={"detail": "Rate limit exceeded (60 requests/minute per IP)."},
         )
-        latest = last_valid
-    return latest
 
-
-def _last_observed_cases(district: str) -> tuple[float | None, str | None]:
-    sub = state.df[
-        (state.df["district"] == district)
-        & (state.df["new_cases"].notna())
-        & (state.df["week_start"] < state.latest_week)
-    ].sort_values("week_start")
-    if sub.empty:
-        return None, None
-    last_row = sub.iloc[-1]
-    return float(last_row["new_cases"]), str(last_row["week_start"])
-
-
-def _district_reasons(district: str, pred_persist: float, pred_gbm: float) -> list[dict[str, Any]]:
-    if state.shap_df is not None:
-        sub = state.shap_df[state.shap_df["district"] == district]
-        if not sub.empty:
-            row = sub.iloc[-1]
-            reasons = []
-            for i in range(1, 4):
-                label = row.get(f"reason_{i}_label")
-                impact = row.get(f"reason_{i}_impact")
-                if pd.notna(label):
-                    reasons.append({"label": str(label), "impact": float(impact) if pd.notna(impact) else 0.0})
-            if reasons:
-                return reasons
-
-    # Transparent model-component fallback when precomputed shap_values.csv is absent
-    reasons = [
-        {
-            "label": "গত সপ্তাহের আসল কেস (Persistence)",
-            "impact": round(0.5 * pred_persist, 1),
-        },
-        {
-            "label": "LightGBM প্যাটার্ন (ল্যাগ, আবহাওয়া ও মৌসুম)",
-            "impact": round(0.5 * pred_gbm, 1),
-        },
-        {
-            "label": "মডেলের সতর্কতা: এটি পরিসংখ্যানগত ব্যাখ্যা, বৈজ্ঞানিক প্রমাণ নয়",
-            "impact": 0.0,
-        },
-    ]
-    return reasons
+    start = time.perf_counter()
+    response = await call_next(request)
+    elapsed_ms = (time.perf_counter() - start) * 1000.0
+    response.headers["X-RateLimit-Remaining"] = str(remaining)
+    logger.info(
+        "%s %s -> %s (%.1fms) ip=%s",
+        request.method,
+        request.url.path,
+        response.status_code,
+        elapsed_ms,
+        client_ip,
+    )
+    return response
 
 
 @lru_cache(maxsize=128)
 def _resolve_district(name: str) -> str | None:
-    districts = state.df["district"].unique()
-    lookup = {d.lower(): d for d in districts}
+    lookup = {d.lower(): d for d in state.forecast_by_district}
     return lookup.get(name.strip().lower())
 
 
 @lru_cache(maxsize=32)
 def _resolve_division(name: str) -> str | None:
-    divisions = state.df["division"].unique()
+    divisions = {r["division"] for r in state.forecast_rows}
     lookup = {d.lower(): d for d in divisions}
     return lookup.get(name.strip().lower())
 
@@ -223,18 +246,21 @@ def health() -> dict[str, Any]:
         "status": "ok",
         "model": "gbm_transfer",
         "blend": "0.5 * GBM-log(+transfer) + 0.5 * persistence",
-        "districts_count": int(state.df["district"].nunique()),
+        "precomputed": True,
+        "cache_entries": state.cache.size(),
+        "cache_ttl_seconds": CACHE_TTL_SECONDS,
+        "rate_limit_per_min": RATE_LIMIT_MAX_REQUESTS,
+        "districts_count": len(state.forecast_rows),
         "latest_week": state.latest_week,
         "latest_observed_week": state.latest_obs_week,
+        "data_as_of": state.last_updated.get("date", state.latest_obs_week),
     }
 
 
 @app.get("/summary")
 def summary() -> dict[str, Any]:
-    latest = _latest_district_rows()
-    pred_total = float(latest["pred_blend"].fillna(0).sum())
-    obs_latest = state.df[state.df["week_start"] == state.latest_obs_week]
-    actual_total = float(obs_latest["new_cases"].fillna(0).sum())
+    pred_total = sum(float(r["pred_blend"]) for r in state.forecast_rows)
+    actual_total = sum(float(r.get("actual_cases") or 0.0) for r in state.forecast_rows)
 
     headline = state.metrics.get("headline", {})
     test_set = state.metrics.get("test_set", {})
@@ -243,6 +269,8 @@ def summary() -> dict[str, Any]:
     return {
         "latest_week": state.latest_week,
         "latest_observed_week": state.latest_obs_week,
+        "data_as_of": state.last_updated.get("date", state.latest_obs_week),
+        "data_source": state.last_updated.get("source", "Figshare / DGHS"),
         "national_actual_latest_week": round(actual_total, 1),
         "national_pred_next_week": round(pred_total, 1),
         "model_metrics": {
@@ -263,24 +291,20 @@ def summary() -> dict[str, Any]:
 
 @app.get("/districts")
 def list_districts() -> list[dict[str, Any]]:
-    latest = _latest_district_rows().sort_values("district")
     out = []
-    for row in latest.itertuples(index=False):
-        lat, lon = state.centroids.get(row.district, (23.8103, 90.4125))
-        obs_val, obs_week = _last_observed_cases(row.district)
-        pred_blend = float(row.pred_blend) if pd.notna(row.pred_blend) else 0.0
+    for r in sorted(state.forecast_rows, key=lambda x: x["district"]):
         out.append(
             {
-                "district": row.district,
-                "division": row.division,
-                "division_bn": DIVISION_NAMES_BN.get(row.division, row.division),
-                "lat": round(lat, 5),
-                "lon": round(lon, 5),
-                "week_start": str(row.week_start),
-                "actual_cases": obs_val,
-                "actual_week": obs_week,
-                "pred_blend": round(pred_blend, 1),
-                "risk_level": classify_risk(pred_blend),
+                "district": r["district"],
+                "division": r["division"],
+                "division_bn": DIVISION_NAMES_BN.get(r["division"], r["division"]),
+                "lat": round(float(r["lat"]), 5),
+                "lon": round(float(r["lon"]), 5),
+                "week_start": r["week_start"],
+                "actual_cases": r["actual_cases"],
+                "actual_week": r["actual_week"],
+                "pred_blend": r["pred_blend"],
+                "risk_level": r["risk_level"],
             }
         )
     return out
@@ -292,34 +316,31 @@ def predict(district: str = Query(..., description="District name, e.g. Dhaka"))
     if not resolved:
         raise HTTPException(status_code=404, detail=f"District '{district}' not found")
 
-    latest = _latest_district_rows()
-    row_df = latest[latest["district"] == resolved]
-    if row_df.empty:
-        raise HTTPException(status_code=404, detail=f"No prediction row for '{resolved}'")
+    cache_key = ("predict", resolved, state.latest_week)
+    cached = state.cache.get(cache_key)
+    if cached is not None:
+        return cached
 
-    row = row_df.iloc[0]
-    pred_gbm = float(row["pred_gbm"]) if pd.notna(row["pred_gbm"]) else 0.0
-    pred_persist = float(row["pred_persist"]) if pd.notna(row["pred_persist"]) else 0.0
-    pred_blend = float(row["pred_blend"]) if pd.notna(row["pred_blend"]) else 0.0
-    obs_val, obs_week = _last_observed_cases(resolved)
-    risk = classify_risk(pred_blend)
-
-    return {
+    r = state.forecast_by_district[resolved]
+    risk = r["risk_level"]
+    result = {
         "district": resolved,
-        "division": str(row["division"]),
-        "division_bn": DIVISION_NAMES_BN.get(str(row["division"]), str(row["division"])),
-        "week_start": str(row["week_start"]),
-        "actual_cases": obs_val,
-        "actual_week": obs_week,
-        "pred_blend": round(pred_blend, 1),
-        "pred_gbm": round(pred_gbm, 1),
-        "pred_persist": round(pred_persist, 1),
+        "division": r["division"],
+        "division_bn": DIVISION_NAMES_BN.get(r["division"], r["division"]),
+        "week_start": r["week_start"],
+        "actual_cases": r["actual_cases"],
+        "actual_week": r["actual_week"],
+        "pred_blend": r["pred_blend"],
+        "pred_gbm": r["pred_gbm"],
+        "pred_persist": r["pred_persist"],
         "risk_level": risk,
-        "reasons": _district_reasons(resolved, pred_persist, pred_gbm),
+        "reasons": r.get("reasons", []),
         "actions": risk_actions_bn(risk),
         "is_observed_target": True,
         "horizon_weeks": 1,
     }
+    state.cache.set(cache_key, result)
+    return result
 
 
 @app.get("/division/{name}")
@@ -328,27 +349,23 @@ def get_division(name: str) -> dict[str, Any]:
     if not resolved:
         raise HTTPException(status_code=404, detail=f"Division '{name}' not found")
 
-    latest = _latest_district_rows()
-    div_rows = latest[latest["division"] == resolved].sort_values("pred_blend", ascending=False)
+    div_rows = sorted(
+        [r for r in state.forecast_rows if r["division"] == resolved],
+        key=lambda x: x["pred_blend"],
+        reverse=True,
+    )
+    districts_list = [
+        {
+            "district": r["district"],
+            "actual_cases": r["actual_cases"],
+            "pred_blend": r["pred_blend"],
+            "risk_level": r["risk_level"],
+        }
+        for r in div_rows
+    ]
+    pred_sum = sum(d["pred_blend"] for d in districts_list)
+    actual_sum = sum(float(d["actual_cases"] or 0.0) for d in districts_list)
 
-    districts_list = []
-    pred_sum = 0.0
-    actual_sum = 0.0
-    for row in div_rows.itertuples(index=False):
-        pb = float(row.pred_blend) if pd.notna(row.pred_blend) else 0.0
-        obs_val, _ = _last_observed_cases(row.district)
-        pred_sum += pb
-        actual_sum += obs_val if obs_val is not None else 0.0
-        districts_list.append(
-            {
-                "district": row.district,
-                "actual_cases": obs_val,
-                "pred_blend": round(pb, 1),
-                "risk_level": classify_risk(pb),
-            }
-        )
-
-    # Division weekly timeseries for 2025 (sum of its districts)
     ts_df = (
         state.df[(state.df["division"] == resolved) & (state.df["split"] == "test")]
         .groupby("week_start", as_index=False)[["new_cases", "pred_blend"]]
@@ -364,13 +381,12 @@ def get_division(name: str) -> dict[str, Any]:
         for r in ts_df.itertuples(index=False)
     ]
 
-    # Division total equals exact sum of its districts
     return {
         "division": resolved,
         "division_bn": DIVISION_NAMES_BN.get(resolved, resolved),
         "week_start": state.latest_week,
         "actual_total": round(actual_sum, 1),
-        "pred_total": round(sum(d["pred_blend"] for d in districts_list), 1),
+        "pred_total": round(pred_sum, 1),
         "risk_level": classify_risk(pred_sum / max(len(districts_list), 1)),
         "districts": districts_list,
         "timeseries": timeseries,
@@ -379,24 +395,29 @@ def get_division(name: str) -> dict[str, Any]:
 
 @app.get("/top10")
 def top10() -> list[dict[str, Any]]:
-    latest = _latest_district_rows().sort_values("pred_blend", ascending=False).head(10)
-    out = []
-    for rank, row in enumerate(latest.itertuples(index=False), start=1):
-        pb = float(row.pred_blend) if pd.notna(row.pred_blend) else 0.0
-        obs_val, _ = _last_observed_cases(row.district)
-        out.append(
-            {
-                "rank": rank,
-                "district": row.district,
-                "division": row.division,
-                "division_bn": DIVISION_NAMES_BN.get(row.division, row.division),
-                "week_start": str(row.week_start),
-                "actual_cases": obs_val,
-                "pred_blend": round(pb, 1),
-                "risk_level": classify_risk(pb),
-            }
-        )
-    return out
+    cache_key = ("top10", state.latest_week)
+    cached = state.cache.get(cache_key)
+    if cached is not None:
+        return cached
+
+    ranked = sorted(
+        state.forecast_rows, key=lambda x: x["pred_blend"], reverse=True
+    )[:10]
+    result = [
+        {
+            "rank": rank,
+            "district": r["district"],
+            "division": r["division"],
+            "division_bn": DIVISION_NAMES_BN.get(r["division"], r["division"]),
+            "week_start": r["week_start"],
+            "actual_cases": r["actual_cases"],
+            "pred_blend": r["pred_blend"],
+            "risk_level": r["risk_level"],
+        }
+        for rank, r in enumerate(ranked, start=1)
+    ]
+    state.cache.set(cache_key, result)
+    return result
 
 
 @app.get("/timeseries")
@@ -423,12 +444,7 @@ def timeseries(
         }
         for r in sub.itertuples(index=False)
     ]
-
-    return {
-        "district": resolved,
-        "split": split,
-        "points": series,
-    }
+    return {"district": resolved, "split": split, "points": series}
 
 
 @app.get("/whatif")
@@ -441,66 +457,28 @@ def whatif(
     if not resolved:
         raise HTTPException(status_code=404, detail=f"District '{district}' not found")
 
-    sub = state.df[
-        (state.df["district"] == resolved) & (state.df["new_cases"].notna())
-    ].sort_values("week_start")
+    r = state.forecast_by_district[resolved]
+    base_actual = float(r.get("actual_cases") or 10.0)
+    base_gbm = float(r["pred_gbm"])
 
-    recent_vals = sub["new_cases"].tail(4).tolist()
-    base_lag1 = float(cases_last_week) if cases_last_week is not None else (float(recent_vals[-1]) if recent_vals else 10.0)
-    base_lag2 = float(recent_vals[-2]) if len(recent_vals) >= 2 else base_lag1
-    base_lag4 = float(recent_vals[0]) if len(recent_vals) >= 4 else base_lag1
+    new_last_week = float(cases_last_week) if cases_last_week is not None else base_actual
+    case_ratio = (new_last_week + 1.0) / (base_actual + 1.0)
+    rain_factor = 1.0 + 0.002 * (rain_mm_3w_ago - 60.0)
 
-    # Build a 42-feature DataFrame matching FEATS exact positional order
-    row_data: dict[str, Any] = {col: 0.0 for col in FEATS}
-    row_data.update(
-        {
-            "month": 9,
-            "cal_year": 2026,
-            "cases_lag1": base_lag1,
-            "cases_lag2": base_lag2,
-            "cases_lag4": base_lag4,
-            "cases_ly": base_lag1,
-            "cases_3yr_mean": base_lag1,
-            "cases_3yr_n": 3,
-            "log_cases_lag1": float(np.log1p(base_lag1)),
-            "log_cases_lag2": float(np.log1p(base_lag2)),
-            "log_cases_lag4": float(np.log1p(base_lag4)),
-            "log_cases_ly": float(np.log1p(base_lag1)),
-            "log_cases_3yr_mean": float(np.log1p(base_lag1)),
-            "nasa_rain_lag2": rain_mm_3w_ago,
-            "nasa_rain_lag3": rain_mm_3w_ago,
-            "nasa_rain_lag4": rain_mm_3w_ago,
-            "om_rain_lag2": rain_mm_3w_ago,
-            "om_rain_lag3": rain_mm_3w_ago,
-            "om_rain_lag4": rain_mm_3w_ago,
-            "nasa_rain_roll4": rain_mm_3w_ago * 4.0,
-            "nasa_tmean_lag2": 28.5,
-            "nasa_tmean_lag3": 28.5,
-            "nasa_tmean_lag4": 28.5,
-            "nasa_tmean_roll4": 28.5,
-            "nasa_hum_lag2": 82.0,
-            "nasa_hum_lag3": 82.0,
-        }
-    )
-
-    div_name = str(sub.iloc[-1]["division"]) if not sub.empty else "Dhaka"
-    X = pd.DataFrame([row_data])[FEATS]
-    X["division"] = pd.Categorical([div_name], categories=sorted(state.df["division"].unique()))
-
-    pred_log = float(state.booster.predict(X)[0])
-    pred_gbm = float(np.clip(np.expm1(pred_log), 0.0, None))
-    pred_persist = base_lag1
-    pred_blend = 0.5 * pred_gbm + 0.5 * pred_persist
+    pred_gbm_adj = max(0.0, base_gbm * (case_ratio ** 0.72) * max(0.5, rain_factor))
+    pred_persist_adj = new_last_week
+    # Fixed 50/50 Blend weights
+    pred_blend_adj = 0.5 * pred_gbm_adj + 0.5 * pred_persist_adj
 
     return {
         "district": resolved,
         "inputs": {
-            "cases_last_week": round(base_lag1, 1),
+            "cases_last_week": round(new_last_week, 1),
             "rain_mm_3w_ago": round(rain_mm_3w_ago, 1),
         },
-        "pred_gbm": round(pred_gbm, 1),
-        "pred_persist": round(pred_persist, 1),
-        "pred_blend": round(pred_blend, 1),
-        "risk_level": classify_risk(pred_blend),
-        "note": "সিমুলেশনটি ৪২টি ফিচারের বর্তমান ইনপুট ও ডিফল্ট আবহাওয়া-প্রোফাইল ব্যবহার করে লাইভ LightGBM মডেল চালিয়েছে।",
+        "pred_gbm": round(pred_gbm_adj, 1),
+        "pred_persist": round(pred_persist_adj, 1),
+        "pred_blend": round(pred_blend_adj, 1),
+        "risk_level": classify_risk(pred_blend_adj),
+        "note": "প্রি-কম্পিউটেড বেসলাইন ও ৫০/৫০ Blend ওজন ব্যবহার করে দ্রুত সেন্সিটিভিটি সিমুলেশন (রিকোয়েস্ট-প্রতি মডেল লোড ছাড়াই)।",
     }

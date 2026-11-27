@@ -77,6 +77,7 @@ export interface TimeseriesPoint {
 export interface SummaryResponse {
   latest_week: string;
   latest_observed_week: string;
+  data_as_of?: string;
   national_actual_latest_week: number;
   national_pred_next_week: number;
   model_metrics: {

@@ -1,0 +1,1739 @@
+{
+  "generated_at": "2026-11-27T14:50:59.554377+00:00",
+  "blend_weights": {
+    "gbm": 0.5,
+    "persistence": 0.5
+  },
+  "latest_week": "2026-06-29",
+  "latest_observed_week": "2026-06-22",
+  "districts": [
+    {
+      "district": "Bagerhat",
+      "division": "Khulna",
+      "lat": 22.66,
+      "lon": 89.79,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 48.0,
+      "pred_gbm": 60.7,
+      "pred_persist": 48.0,
+      "pred_blend": 54.4,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 14.9
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 3.2
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 1.8
+        }
+      ]
+    },
+    {
+      "district": "Bandarban",
+      "division": "Chattogram",
+      "lat": 22.2,
+      "lon": 92.22,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 15.0,
+      "pred_gbm": 15.3,
+      "pred_persist": 15.0,
+      "pred_blend": 15.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.5
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.0
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.6
+        }
+      ]
+    },
+    {
+      "district": "Barguna",
+      "division": "Barishal",
+      "lat": 22.6,
+      "lon": 90.13,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 39.0,
+      "pred_gbm": 51.4,
+      "pred_persist": 39.0,
+      "pred_blend": 45.2,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 11.6
+        },
+        {
+          "label": "৩ বছরের গড় কেস (বাড়িয়েছে)",
+          "impact": 2.8
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 1.5
+        }
+      ]
+    },
+    {
+      "district": "Barishal",
+      "division": "Barishal",
+      "lat": 22.7,
+      "lon": 90.37,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 37.0,
+      "pred_gbm": 48.6,
+      "pred_persist": 37.0,
+      "pred_blend": 42.8,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 11.5
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.0
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 1.8
+        }
+      ]
+    },
+    {
+      "district": "Bhola",
+      "division": "Barishal",
+      "lat": 22.68,
+      "lon": 90.65,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 9.0,
+      "pred_gbm": 8.7,
+      "pred_persist": 9.0,
+      "pred_blend": 8.9,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.6
+        },
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.5
+        }
+      ]
+    },
+    {
+      "district": "Bogura",
+      "division": "Rajshahi",
+      "lat": 24.85,
+      "lon": 89.37,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 10.0,
+      "pred_gbm": 8.4,
+      "pred_persist": 10.0,
+      "pred_blend": 9.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.9
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.4
+        }
+      ]
+    },
+    {
+      "district": "Brahmanbaria",
+      "division": "Chattogram",
+      "lat": 23.96,
+      "lon": 91.11,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.8,
+      "pred_persist": 1.0,
+      "pred_blend": 0.9,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Chandpur",
+      "division": "Chattogram",
+      "lat": 23.23,
+      "lon": 90.65,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 8.0,
+      "pred_gbm": 4.5,
+      "pred_persist": 8.0,
+      "pred_blend": 6.3,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.2
+        }
+      ]
+    },
+    {
+      "district": "Chapainawabganj",
+      "division": "Rajshahi",
+      "lat": 24.6,
+      "lon": 88.27,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.5,
+      "pred_persist": 1.0,
+      "pred_blend": 0.7,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Chattogram",
+      "division": "Chattogram",
+      "lat": 22.36,
+      "lon": 91.78,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 51.0,
+      "pred_gbm": 72.2,
+      "pred_persist": 51.0,
+      "pred_blend": 61.6,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 16.6
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 2.7
+        },
+        {
+          "label": "জেলার জনসংখ্যা (log_pop) (বাড়িয়েছে)",
+          "impact": 2.5
+        }
+      ]
+    },
+    {
+      "district": "Chuadanga",
+      "division": "Khulna",
+      "lat": 23.64,
+      "lon": 88.88,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 2.0,
+      "pred_gbm": 1.2,
+      "pred_persist": 2.0,
+      "pred_blend": 1.6,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Coxs_Bazar",
+      "division": "Chattogram",
+      "lat": 21.44,
+      "lon": 92.01,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 6.0,
+      "pred_gbm": 14.8,
+      "pred_persist": 6.0,
+      "pred_blend": 10.4,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.2
+        },
+        {
+          "label": "latitude (বাড়িয়েছে)",
+          "impact": 0.9
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.6
+        }
+      ]
+    },
+    {
+      "district": "Cumilla",
+      "division": "Chattogram",
+      "lat": 23.46,
+      "lon": 91.18,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 16.0,
+      "pred_gbm": 14.3,
+      "pred_persist": 16.0,
+      "pred_blend": 15.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.3
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.7
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.6
+        }
+      ]
+    },
+    {
+      "district": "Dhaka",
+      "division": "Dhaka",
+      "lat": 23.81,
+      "lon": 90.41,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 268.0,
+      "pred_gbm": 245.9,
+      "pred_persist": 268.0,
+      "pred_blend": 256.9,
+      "risk_level": "high",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 66.4
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 10.2
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 6.6
+        }
+      ]
+    },
+    {
+      "district": "Dinajpur",
+      "division": "Rangpur",
+      "lat": 25.62,
+      "lon": 88.64,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.3,
+      "pred_persist": 0.0,
+      "pred_blend": 0.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Faridpur",
+      "division": "Dhaka",
+      "lat": 23.6,
+      "lon": 89.83,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 5.0,
+      "pred_gbm": 2.1,
+      "pred_persist": 5.0,
+      "pred_blend": 3.5,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Feni",
+      "division": "Chattogram",
+      "lat": 23.02,
+      "lon": 91.4,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 3.0,
+      "pred_gbm": 3.1,
+      "pred_persist": 3.0,
+      "pred_blend": 3.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.4
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Gaibandha",
+      "division": "Rangpur",
+      "lat": 25.33,
+      "lon": 89.55,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.1,
+      "pred_persist": 0.0,
+      "pred_blend": 0.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Gazipur",
+      "division": "Dhaka",
+      "lat": 24.0,
+      "lon": 90.42,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 12.0,
+      "pred_gbm": 16.7,
+      "pred_persist": 12.0,
+      "pred_blend": 14.3,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.7
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.6
+        }
+      ]
+    },
+    {
+      "district": "Gopalganj",
+      "division": "Dhaka",
+      "lat": 23.01,
+      "lon": 89.83,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.4,
+      "pred_persist": 1.0,
+      "pred_blend": 0.7,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Habiganj",
+      "division": "Sylhet",
+      "lat": 24.38,
+      "lon": 91.42,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 1.6,
+      "pred_persist": 0.0,
+      "pred_blend": 0.8,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Jamalpur",
+      "division": "Mymensingh",
+      "lat": 24.92,
+      "lon": 89.94,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 2.1,
+      "pred_persist": 0.0,
+      "pred_blend": 1.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.4
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেসের মাত্রা (বাড়িয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Jashore",
+      "division": "Khulna",
+      "lat": 23.17,
+      "lon": 89.21,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 9.0,
+      "pred_gbm": 12.8,
+      "pred_persist": 9.0,
+      "pred_blend": 10.9,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.1
+        },
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.8
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.6
+        }
+      ]
+    },
+    {
+      "district": "Jhalokathi",
+      "division": "Barishal",
+      "lat": 22.64,
+      "lon": 90.21,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 62.0,
+      "pred_gbm": 61.9,
+      "pred_persist": 62.0,
+      "pred_blend": 62.0,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 15.7
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 3.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.8
+        }
+      ]
+    },
+    {
+      "district": "Jhenaidah",
+      "division": "Khulna",
+      "lat": 23.54,
+      "lon": 89.17,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.5,
+      "pred_persist": 1.0,
+      "pred_blend": 0.7,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Joypurhat",
+      "division": "Rajshahi",
+      "lat": 25.1,
+      "lon": 89.01,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.2,
+      "pred_persist": 0.0,
+      "pred_blend": 0.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Khagrachhari",
+      "division": "Chattogram",
+      "lat": 23.12,
+      "lon": 91.98,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 4.0,
+      "pred_gbm": 2.3,
+      "pred_persist": 4.0,
+      "pred_blend": 3.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Khulna",
+      "division": "Khulna",
+      "lat": 22.85,
+      "lon": 89.54,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 18.0,
+      "pred_gbm": 20.5,
+      "pred_persist": 18.0,
+      "pred_blend": 19.3,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.7
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.8
+        }
+      ]
+    },
+    {
+      "district": "Kishoreganj",
+      "division": "Dhaka",
+      "lat": 24.43,
+      "lon": 90.78,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 2.0,
+      "pred_gbm": 2.1,
+      "pred_persist": 2.0,
+      "pred_blend": 2.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Kurigram",
+      "division": "Rangpur",
+      "lat": 25.81,
+      "lon": 89.65,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.1,
+      "pred_persist": 0.0,
+      "pred_blend": 0.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Kushtia",
+      "division": "Khulna",
+      "lat": 23.9,
+      "lon": 89.12,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.9,
+      "pred_persist": 0.0,
+      "pred_blend": 0.5,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Lakshmipur",
+      "division": "Chattogram",
+      "lat": 22.94,
+      "lon": 90.83,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 1.3,
+      "pred_persist": 1.0,
+      "pred_blend": 1.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Lalmonirhat",
+      "division": "Rangpur",
+      "lat": 25.91,
+      "lon": 89.45,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.2,
+      "pred_persist": 0.0,
+      "pred_blend": 0.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Madaripur",
+      "division": "Dhaka",
+      "lat": 23.16,
+      "lon": 90.21,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 10.0,
+      "pred_gbm": 9.2,
+      "pred_persist": 10.0,
+      "pred_blend": 9.6,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.7
+        },
+        {
+          "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.5
+        }
+      ]
+    },
+    {
+      "district": "Magura",
+      "division": "Khulna",
+      "lat": 23.49,
+      "lon": 89.42,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 12.0,
+      "pred_gbm": 10.3,
+      "pred_persist": 12.0,
+      "pred_blend": 11.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.9
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.5
+        }
+      ]
+    },
+    {
+      "district": "Manikganj",
+      "division": "Dhaka",
+      "lat": 23.86,
+      "lon": 90.0,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 17.0,
+      "pred_gbm": 9.8,
+      "pred_persist": 17.0,
+      "pred_blend": 13.4,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.2
+        }
+      ]
+    },
+    {
+      "district": "Meherpur",
+      "division": "Khulna",
+      "lat": 23.76,
+      "lon": 88.63,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 7.0,
+      "pred_gbm": 5.4,
+      "pred_persist": 7.0,
+      "pred_blend": 6.2,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.2
+        }
+      ]
+    },
+    {
+      "district": "Moulvibazar",
+      "division": "Sylhet",
+      "lat": 24.48,
+      "lon": 91.77,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.4,
+      "pred_persist": 1.0,
+      "pred_blend": 0.7,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Munshiganj",
+      "division": "Dhaka",
+      "lat": 23.54,
+      "lon": 90.53,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 29.0,
+      "pred_gbm": 23.8,
+      "pred_persist": 29.0,
+      "pred_blend": 26.4,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 5.7
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.5
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.8
+        }
+      ]
+    },
+    {
+      "district": "Mymensingh",
+      "division": "Mymensingh",
+      "lat": 24.75,
+      "lon": 90.4,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 16.0,
+      "pred_gbm": 13.0,
+      "pred_persist": 16.0,
+      "pred_blend": 14.5,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 2.3
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.6
+        },
+        {
+          "label": "জেলার জনসংখ্যা (log_pop) (বাড়িয়েছে)",
+          "impact": 0.6
+        }
+      ]
+    },
+    {
+      "district": "Naogaon",
+      "division": "Rajshahi",
+      "lat": 24.8,
+      "lon": 88.75,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 1.0,
+      "pred_persist": 0.0,
+      "pred_blend": 0.5,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Narail",
+      "division": "Khulna",
+      "lat": 23.17,
+      "lon": 89.51,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 9.0,
+      "pred_gbm": 9.0,
+      "pred_persist": 9.0,
+      "pred_blend": 9.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.6
+        },
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.5
+        }
+      ]
+    },
+    {
+      "district": "Narayanganj",
+      "division": "Dhaka",
+      "lat": 23.62,
+      "lon": 90.5,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 3.0,
+      "pred_gbm": 1.2,
+      "pred_persist": 3.0,
+      "pred_blend": 2.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Narsingdi",
+      "division": "Dhaka",
+      "lat": 23.92,
+      "lon": 90.72,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 14.0,
+      "pred_gbm": 8.3,
+      "pred_persist": 14.0,
+      "pred_blend": 11.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 1.5
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.5
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.4
+        }
+      ]
+    },
+    {
+      "district": "Natore",
+      "division": "Rajshahi",
+      "lat": 24.41,
+      "lon": 88.98,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 2.0,
+      "pred_gbm": 0.8,
+      "pred_persist": 2.0,
+      "pred_blend": 1.4,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Netrokona",
+      "division": "Mymensingh",
+      "lat": 24.88,
+      "lon": 90.73,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.7,
+      "pred_persist": 1.0,
+      "pred_blend": 0.9,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Nilphamari",
+      "division": "Rangpur",
+      "lat": 25.93,
+      "lon": 88.85,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.2,
+      "pred_persist": 0.0,
+      "pred_blend": 0.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Noakhali",
+      "division": "Chattogram",
+      "lat": 22.82,
+      "lon": 91.1,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 7.0,
+      "pred_gbm": 5.2,
+      "pred_persist": 7.0,
+      "pred_blend": 6.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.2
+        }
+      ]
+    },
+    {
+      "district": "Pabna",
+      "division": "Rajshahi",
+      "lat": 24.01,
+      "lon": 89.24,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 2.0,
+      "pred_gbm": 1.0,
+      "pred_persist": 2.0,
+      "pred_blend": 1.5,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Panchagarh",
+      "division": "Rangpur",
+      "lat": 26.34,
+      "lon": 88.56,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.0,
+      "pred_persist": 0.0,
+      "pred_blend": 0.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Patuakhali",
+      "division": "Barishal",
+      "lat": 22.36,
+      "lon": 90.33,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 25.0,
+      "pred_gbm": 24.8,
+      "pred_persist": 25.0,
+      "pred_blend": 24.9,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 4.7
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 1.4
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 1.0
+        }
+      ]
+    },
+    {
+      "district": "Pirojpur",
+      "division": "Barishal",
+      "lat": 22.58,
+      "lon": 89.98,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 81.0,
+      "pred_gbm": 113.7,
+      "pred_persist": 81.0,
+      "pred_blend": 97.4,
+      "risk_level": "medium",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 29.5
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 5.7
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
+          "impact": 3.2
+        }
+      ]
+    },
+    {
+      "district": "Rajbari",
+      "division": "Dhaka",
+      "lat": 23.76,
+      "lon": 89.64,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.6,
+      "pred_persist": 1.0,
+      "pred_blend": 0.8,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Rajshahi",
+      "division": "Rajshahi",
+      "lat": 24.37,
+      "lon": 88.6,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 9.0,
+      "pred_gbm": 7.1,
+      "pred_persist": 9.0,
+      "pred_blend": 8.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.6
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.3
+        }
+      ]
+    },
+    {
+      "district": "Rangamati",
+      "division": "Chattogram",
+      "lat": 22.65,
+      "lon": 92.18,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 4.0,
+      "pred_gbm": 2.0,
+      "pred_persist": 4.0,
+      "pred_blend": 3.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জেলার জনসংখ্যা (log_pop) (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Rangpur",
+      "division": "Rangpur",
+      "lat": 25.74,
+      "lon": 89.28,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 1.0,
+      "pred_gbm": 0.7,
+      "pred_persist": 1.0,
+      "pred_blend": 0.9,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Satkhira",
+      "division": "Khulna",
+      "lat": 22.72,
+      "lon": 89.08,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 4.0,
+      "pred_gbm": 2.6,
+      "pred_persist": 4.0,
+      "pred_blend": 3.3,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.2
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Shariatpur",
+      "division": "Dhaka",
+      "lat": 23.21,
+      "lon": 90.35,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.0,
+      "pred_persist": 0.0,
+      "pred_blend": 0.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Sherpur",
+      "division": "Mymensingh",
+      "lat": 25.02,
+      "lon": 90.02,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 5.0,
+      "pred_gbm": 1.8,
+      "pred_persist": 5.0,
+      "pred_blend": 3.4,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জেলার জনসংখ্যা (log_pop) (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Sirajganj",
+      "division": "Rajshahi",
+      "lat": 24.45,
+      "lon": 89.71,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 7.0,
+      "pred_gbm": 5.9,
+      "pred_persist": 7.0,
+      "pred_blend": 6.4,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
+          "impact": 0.4
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
+          "impact": 0.3
+        }
+      ]
+    },
+    {
+      "district": "Sunamganj",
+      "division": "Sylhet",
+      "lat": 25.07,
+      "lon": 91.4,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.1,
+      "pred_persist": 0.0,
+      "pred_blend": 0.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    },
+    {
+      "district": "Sylhet",
+      "division": "Sylhet",
+      "lat": 24.9,
+      "lon": 91.87,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 2.0,
+      "pred_gbm": 4.1,
+      "pred_persist": 2.0,
+      "pred_blend": 3.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.4
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Tangail",
+      "division": "Dhaka",
+      "lat": 24.25,
+      "lon": 89.92,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 2.0,
+      "pred_gbm": 2.1,
+      "pred_persist": 2.0,
+      "pred_blend": 2.1,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.3
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
+          "impact": 0.1
+        },
+        {
+          "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
+          "impact": 0.1
+        }
+      ]
+    },
+    {
+      "district": "Thakurgaon",
+      "division": "Rangpur",
+      "lat": 26.03,
+      "lon": 88.45,
+      "week_start": "2026-06-29",
+      "actual_week": "2026-06-22",
+      "actual_cases": 0.0,
+      "pred_gbm": 0.1,
+      "pred_persist": 0.0,
+      "pred_blend": 0.0,
+      "risk_level": "low",
+      "reasons": [
+        {
+          "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
+          "impact": 0.0
+        },
+        {
+          "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
+          "impact": 0.0
+        }
+      ]
+    }
+  ]
+}

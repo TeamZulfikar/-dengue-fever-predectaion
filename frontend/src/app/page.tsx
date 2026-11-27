@@ -692,6 +692,9 @@ export default function HomePage() {
                             );
                           })}
                         </div>
+                        <p className="mt-2.5 text-[11px] text-amber-300/90">
+                          SHAP অবদান দেখায়, কার্যকারণ প্রমাণ করে না।
+                        </p>
                       </div>
 
                       {/* Precautions */}

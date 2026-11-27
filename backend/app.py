@@ -34,6 +34,7 @@ FORECASTS_PATH = DATA_DIR / "forecasts_latest.json"
 PREDICTIONS_PATH = DATA_DIR / "predictions.csv"
 METRICS_PATH = DATA_DIR / "metrics.json"
 LAST_UPDATED_PATH = DATA_DIR / "last_updated.json"
+SHAP_PATH = DATA_DIR / "shap_values.csv"
 
 CACHE_TTL_SECONDS = 3600  # 1 hour
 RATE_LIMIT_MAX_REQUESTS = 60
@@ -341,6 +342,38 @@ def predict(district: str = Query(..., description="District name, e.g. Dhaka"))
     }
     state.cache.set(cache_key, result)
     return result
+
+
+@app.get("/shap")
+def get_shap(district: str = Query(..., description="District name, e.g. Dhaka")) -> dict[str, Any]:
+    resolved = _resolve_district(district)
+    if not resolved:
+        raise HTTPException(status_code=404, detail=f"District '{district}' not found")
+    if not SHAP_PATH.exists():
+        raise HTTPException(status_code=404, detail="shap_values.csv not found")
+
+    shap_df = pd.read_csv(SHAP_PATH)
+    sub = shap_df[shap_df["district"] == resolved]
+    if sub.empty:
+        raise HTTPException(status_code=404, detail=f"No SHAP row for '{resolved}'")
+
+    row = sub.iloc[-1]
+    reasons = []
+    for i in range(1, 4):
+        reasons.append(
+            {
+                "rank": i,
+                "label": str(row[f"reason_{i}_label"]),
+                "impact": float(row[f"reason_{i}_impact"]),
+                "log_shap": float(row[f"reason_{i}_log_shap"]),
+            }
+        )
+    return {
+        "district": resolved,
+        "week_start": str(row["week_start"]),
+        "reasons": reasons,
+        "note": "SHAP অবদান দেখায়, কার্যকারণ প্রমাণ করে না।",
+    }
 
 
 @app.get("/division/{name}")

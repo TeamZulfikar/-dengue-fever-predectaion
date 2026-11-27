@@ -16,6 +16,7 @@ export interface DistrictSummary {
 export interface ReasonItem {
   label: string;
   impact: number;
+  log_shap?: number;
 }
 
 export interface DistrictPrediction {

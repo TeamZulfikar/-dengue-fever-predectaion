@@ -158,7 +158,13 @@ def run_weekly_forecast() -> dict[str, Any]:
             case_share = round((abs(raw_val) / abs_sum) * (0.5 * pred_gbm), 1)
             sign_note = "বাড়িয়েছে" if raw_val >= 0 else "কমিয়েছে"
             label = f"{FEAT_LABELS_BN.get(fname, fname)} ({sign_note})"
-            reasons.append({"label": label, "impact": case_share})
+            reasons.append(
+                {
+                    "label": label,
+                    "impact": case_share,
+                    "log_shap": round(raw_val, 4),
+                }
+            )
             shap_rec[f"reason_{rank_i}_label"] = label
             shap_rec[f"reason_{rank_i}_impact"] = case_share
             shap_rec[f"reason_{rank_i}_log_shap"] = round(raw_val, 4)

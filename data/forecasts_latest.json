@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-11-27T14:50:59.554377+00:00",
+  "generated_at": "2026-11-27T15:18:02.719779+00:00",
   "blend_weights": {
     "gbm": 0.5,
     "persistence": 0.5
@@ -22,15 +22,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 14.9
+          "impact": 14.9,
+          "log_shap": 1.5115
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 3.2
+          "impact": 3.2,
+          "log_shap": 0.3242
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.8
+          "impact": 1.8,
+          "log_shap": 0.178
         }
       ]
     },
@@ -49,15 +52,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.5
+          "impact": 2.5,
+          "log_shap": 0.6964
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.0
+          "impact": 1.0,
+          "log_shap": 0.2782
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": -0.1629
         }
       ]
     },
@@ -76,15 +82,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 11.6
+          "impact": 11.6,
+          "log_shap": 1.394
         },
         {
           "label": "৩ বছরের গড় কেস (বাড়িয়েছে)",
-          "impact": 2.8
+          "impact": 2.8,
+          "log_shap": 0.3354
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.5
+          "impact": 1.5,
+          "log_shap": 0.1818
         }
       ]
     },
@@ -103,15 +112,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 11.5
+          "impact": 11.5,
+          "log_shap": 1.328
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 2.0
+          "impact": 2.0,
+          "log_shap": 0.2305
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.8
+          "impact": 1.8,
+          "log_shap": 0.2059
         }
       ]
     },
@@ -130,15 +142,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": 0.2255
         },
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": 0.1855
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": -0.1758
         }
       ]
     },
@@ -157,15 +172,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.9
+          "impact": 0.9,
+          "log_shap": 0.2931
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": -0.1676
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.4
+          "impact": 0.4,
+          "log_shap": 0.1273
         }
       ]
     },
@@ -184,15 +202,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.7412
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1051
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0901
         }
       ]
     },
@@ -211,15 +232,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": 0.158
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.157
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": 0.0956
         }
       ]
     },
@@ -238,15 +262,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.7988
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1381
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0957
         }
       ]
     },
@@ -265,15 +292,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 16.6
+          "impact": 16.6,
+          "log_shap": 1.4352
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 2.7
+          "impact": 2.7,
+          "log_shap": 0.2306
         },
         {
           "label": "জেলার জনসংখ্যা (log_pop) (বাড়িয়েছে)",
-          "impact": 2.5
+          "impact": 2.5,
+          "log_shap": 0.2118
         }
       ]
     },
@@ -292,15 +322,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.6097
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1235
         },
         {
           "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.081
         }
       ]
     },
@@ -319,15 +352,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.2
+          "impact": 1.2,
+          "log_shap": 0.2892
         },
         {
           "label": "latitude (বাড়িয়েছে)",
-          "impact": 0.9
+          "impact": 0.9,
+          "log_shap": 0.2311
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": 0.1417
         }
       ]
     },
@@ -346,15 +382,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.3
+          "impact": 2.3,
+          "log_shap": 0.6006
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.7
+          "impact": 0.7,
+          "log_shap": 0.1826
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": -0.1657
         }
       ]
     },
@@ -373,15 +412,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 66.4
+          "impact": 66.4,
+          "log_shap": 2.5213
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 10.2
+          "impact": 10.2,
+          "log_shap": 0.3862
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
-          "impact": 6.6
+          "impact": 6.6,
+          "log_shap": 0.252
         }
       ]
     },
@@ -400,15 +442,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -1.0334
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.139
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1138
         }
       ]
     },
@@ -427,15 +472,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.2252
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1146
         },
         {
           "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1118
         }
       ]
     },
@@ -454,15 +502,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.4
+          "impact": 0.4,
+          "log_shap": -0.3565
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": 0.1638
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1267
         }
       ]
     },
@@ -481,15 +532,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0307
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1427
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1096
         }
       ]
     },
@@ -508,15 +562,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.0
+          "impact": 2.0,
+          "log_shap": 0.4884
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.7
+          "impact": 1.7,
+          "log_shap": 0.418
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": -0.1494
         }
       ]
     },
@@ -535,15 +592,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.7869
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1471
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0948
         }
       ]
     },
@@ -562,15 +622,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.882
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": 0.2732
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0927
         }
       ]
     },
@@ -589,15 +652,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.4
+          "impact": 0.4,
+          "log_shap": -0.8778
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": 0.4443
         },
         {
           "label": "২ সপ্তাহ আগের কেসের মাত্রা (বাড়িয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": 0.0955
         }
       ]
     },
@@ -616,15 +682,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.1
+          "impact": 1.1,
+          "log_shap": 0.3073
         },
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.8
+          "impact": 0.8,
+          "log_shap": 0.216
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": 0.1625
         }
       ]
     },
@@ -643,15 +712,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 15.7
+          "impact": 15.7,
+          "log_shap": 1.6335
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 3.0
+          "impact": 3.0,
+          "log_shap": 0.3121
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
-          "impact": 1.8
+          "impact": 1.8,
+          "log_shap": 0.1903
         }
       ]
     },
@@ -670,15 +742,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.8007
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1535
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.102
         }
       ]
     },
@@ -697,15 +772,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0149
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1471
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.109
         }
       ]
     },
@@ -724,15 +802,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.1563
         },
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.128
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1266
         }
       ]
     },
@@ -751,15 +832,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 3.7
+          "impact": 3.7,
+          "log_shap": 0.7429
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.2
+          "impact": 1.2,
+          "log_shap": 0.2312
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.8
+          "impact": 0.8,
+          "log_shap": -0.1601
         }
       ]
     },
@@ -778,15 +862,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.5296
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": 0.2545
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.127
         }
       ]
     },
@@ -805,15 +892,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0247
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1449
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1085
         }
       ]
     },
@@ -832,15 +922,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.9507
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1015
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0909
         }
       ]
     },
@@ -859,15 +952,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.7424
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1293
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.095
         }
       ]
     },
@@ -886,15 +982,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0195
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1483
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1082
         }
       ]
     },
@@ -913,15 +1012,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.7
+          "impact": 0.7,
+          "log_shap": 0.2464
         },
         {
           "label": "৪ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": 0.1775
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": -0.1758
         }
       ]
     },
@@ -940,15 +1042,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 1.1
+          "impact": 1.1,
+          "log_shap": 0.3501
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.9
+          "impact": 0.9,
+          "log_shap": 0.2858
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": -0.1638
         }
       ]
     },
@@ -967,15 +1072,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.2
+          "impact": 2.2,
+          "log_shap": 0.7996
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": -0.1677
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": 0.0887
         }
       ]
     },
@@ -994,15 +1102,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": 0.2571
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.1761
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.1244
         }
       ]
     },
@@ -1021,15 +1132,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.802
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1395
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0918
         }
       ]
     },
@@ -1048,15 +1162,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 5.7
+          "impact": 5.7,
+          "log_shap": 1.213
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.5
+          "impact": 1.5,
+          "log_shap": 0.3146
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.8
+          "impact": 0.8,
+          "log_shap": 0.1726
         }
       ]
     },
@@ -1075,15 +1192,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 2.3
+          "impact": 2.3,
+          "log_shap": 0.6309
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": -0.1752
         },
         {
           "label": "জেলার জনসংখ্যা (log_pop) (বাড়িয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": 0.1715
         }
       ]
     },
@@ -1102,15 +1222,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.9301
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0996
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0872
         }
       ]
     },
@@ -1129,15 +1252,18 @@
       "reasons": [
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": -0.1616
         },
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": 0.1509
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": 0.1414
         }
       ]
     },
@@ -1156,15 +1282,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.2455
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.228
         },
         {
           "label": "৪ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1232
         }
       ]
     },
@@ -1183,15 +1312,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 1.5
+          "impact": 1.5,
+          "log_shap": 0.5714
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.5
+          "impact": 0.5,
+          "log_shap": -0.1831
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.4
+          "impact": 0.4,
+          "log_shap": 0.1384
         }
       ]
     },
@@ -1210,15 +1342,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.6337
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.184
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0924
         }
       ]
     },
@@ -1237,15 +1372,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.7884
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1035
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0906
         }
       ]
     },
@@ -1264,15 +1402,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0284
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1487
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1079
         }
       ]
     },
@@ -1291,15 +1432,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": 0.1913
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.1411
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": 0.1312
         }
       ]
     },
@@ -1318,15 +1462,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.5961
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1693
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.12
         }
       ]
     },
@@ -1345,15 +1492,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0209
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1411
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1043
         }
       ]
     },
@@ -1372,15 +1522,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 4.7
+          "impact": 4.7,
+          "log_shap": 0.9156
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 1.4
+          "impact": 1.4,
+          "log_shap": 0.2678
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 1.0
+          "impact": 1.0,
+          "log_shap": 0.1884
         }
       ]
     },
@@ -1399,15 +1552,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 29.5
+          "impact": 29.5,
+          "log_shap": 1.88
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 5.7
+          "impact": 5.7,
+          "log_shap": 0.3607
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (বাড়িয়েছে)",
-          "impact": 3.2
+          "impact": 3.2,
+          "log_shap": 0.2025
         }
       ]
     },
@@ -1426,15 +1582,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.7937
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0975
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0897
         }
       ]
     },
@@ -1453,15 +1612,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.6
+          "impact": 0.6,
+          "log_shap": 0.2377
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.143
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": 0.115
         }
       ]
     },
@@ -1480,15 +1642,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.2086
         },
         {
           "label": "জেলার জনসংখ্যা (log_pop) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1287
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1178
         }
       ]
     },
@@ -1507,15 +1672,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.7854
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1458
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.0933
         }
       ]
     },
@@ -1534,15 +1702,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.2
+          "impact": 0.2,
+          "log_shap": -0.1567
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1295
         },
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1042
         }
       ]
     },
@@ -1561,15 +1732,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0042
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1442
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1051
         }
       ]
     },
@@ -1588,15 +1762,18 @@
       "reasons": [
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1683
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1326
         },
         {
           "label": "জেলার জনসংখ্যা (log_pop) (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1061
         }
       ]
     },
@@ -1615,15 +1792,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (বাড়িয়েছে)",
-          "impact": 0.4
+          "impact": 0.4,
+          "log_shap": 0.1798
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.1412
         },
         {
           "label": "মৌসুম ও সময় (cos_doy) (বাড়িয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": 0.1359
         }
       ]
     },
@@ -1642,15 +1822,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.9878
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1278
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1083
         }
       ]
     },
@@ -1669,15 +1852,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.4
+          "impact": 0.4,
+          "log_shap": -0.4506
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": 0.3476
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1157
         }
       ]
     },
@@ -1696,15 +1882,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.3
+          "impact": 0.3,
+          "log_shap": -0.5116
         },
         {
           "label": "২ সপ্তাহ আগের কেস (বাড়িয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": 0.1991
         },
         {
           "label": "জাতীয় Stage-1 পূর্বাভাস (কমিয়েছে)",
-          "impact": 0.1
+          "impact": 0.1,
+          "log_shap": -0.1196
         }
       ]
     },
@@ -1723,15 +1912,18 @@
       "reasons": [
         {
           "label": "গত সপ্তাহের আসল কেস (cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -1.0181
         },
         {
           "label": "২ সপ্তাহ আগের কেস (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1456
         },
         {
           "label": "গত সপ্তাহের কেসের মাত্রা (log_cases_lag1) (কমিয়েছে)",
-          "impact": 0.0
+          "impact": 0.0,
+          "log_shap": -0.1083
         }
       ]
     }

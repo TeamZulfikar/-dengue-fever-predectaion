@@ -27,7 +27,13 @@ def main() -> None:
     dhaka_2 = backend_app.predict("Dhaka")
     assert dhaka_1 == dhaka_2
     assert dhaka_1["pred_blend"] >= 0
+    assert len(dhaka_1["reasons"]) == 3 and "log_shap" in dhaka_1["reasons"][0]
     print("PREDICT Dhaka (cached):", dhaka_1["pred_blend"], dhaka_1["risk_level"])
+
+    shap_dhaka = backend_app.get_shap("Dhaka")
+    assert len(shap_dhaka["reasons"]) == 3
+    assert abs(shap_dhaka["reasons"][0]["log_shap"] - 2.5213) < 0.05
+    print("SHAP Dhaka #1:", shap_dhaka["reasons"][0])
 
     div = backend_app.get_division("Dhaka")
     assert abs(div["pred_total"] - sum(d["pred_blend"] for d in div["districts"])) < 0.2

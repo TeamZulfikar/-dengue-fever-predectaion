@@ -1,0 +1,210 @@
+{
+  "test_set": {
+    "description": "Held-out year 2025, district-weekly, 1-week-ahead forecasts",
+    "n_district_weeks": 3264,
+    "n_weeks": 51,
+    "n_districts": 64,
+    "actual_annual_cases_51w": 102562.0,
+    "note": "Week of 2025-12-29 excluded: all-zero artefact in the Figshare file (national total 0 between 771 and the year boundary). Train: 2019 w35-52 + 2022-2024 (11,072 valid district-weeks)."
+  },
+  "headline": {
+    "best_model": "Blend: 0.5 * GBM-log(+transfer) + 0.5 * persistence (50/50 weight fixed in advance, not tuned on test)",
+    "best_MAE": 8.60806740707821,
+    "mean3yr_MAE": 31.982689950980394,
+    "mae_reduction_vs_mean3yr_pct": 73.08523010330987,
+    "beats_mean3yr": true,
+    "best_annual_pred": 102778.01409748614,
+    "best_annual_err_pct": 0.2106180627192746
+  },
+  "district_weekly": {
+    "GBM-log + transfer": {
+      "MAE": 9.552158081237941,
+      "RMSE": 32.43128072685803,
+      "MAPE_pos": 66.44367812899142,
+      "R2": 0.9336091400134929,
+      "annual_pred": 102943.02819497226,
+      "annual_err_pct": 0.37151010605512347
+    },
+    "GBM-log (no transfer)": {
+      "MAE": 9.593403250561073,
+      "RMSE": 33.726775519916586,
+      "MAPE_pos": 65.66442302204389,
+      "R2": 0.9281991245806618,
+      "annual_pred": 101861.24822982767,
+      "annual_err_pct": -0.683246982481159
+    },
+    "GBM-L1-raw": {
+      "MAE": 9.695297872009522,
+      "RMSE": 28.60997290645932,
+      "MAPE_pos": 81.1670178297451,
+      "R2": 0.9483327926427564,
+      "annual_pred": 109973.49072040609,
+      "annual_err_pct": 7.226351592603583
+    },
+    "GBM-L2-raw": {
+      "MAE": 13.139129713227204,
+      "RMSE": 52.92006710074237,
+      "MAPE_pos": 100.54470812107625,
+      "R2": 0.8232249911654905,
+      "annual_pred": 115429.23498177745,
+      "annual_err_pct": 12.545811296364592
+    },
+    "Blend GBM-log+persist": {
+      "MAE": 8.60806740707821,
+      "RMSE": 26.11841895058674,
+      "MAPE_pos": 67.63474466531505,
+      "R2": 0.9569400161124386,
+      "annual_pred": 102778.01409748614,
+      "annual_err_pct": 0.2106180627192746
+    },
+    "Blend GBM-L1+persist": {
+      "MAE": 8.604959795908737,
+      "RMSE": 24.34206843011384,
+      "MAPE_pos": 75.55751694267343,
+      "R2": 0.9625979804236449,
+      "annual_pred": 106293.24536020304,
+      "annual_err_pct": 3.6380388059934905
+    },
+    "Mean-3yr": {
+      "MAE": 31.982689950980394,
+      "RMSE": 145.46621996745625,
+      "MAPE_pos": 174.04026197047543,
+      "R2": -0.3356860874611751,
+      "annual_pred": 161560.83333333334,
+      "annual_err_pct": 57.52504176335616
+    },
+    "Seasonal naive": {
+      "MAE": 20.838848039215687,
+      "RMSE": 76.01231437257064,
+      "MAPE_pos": 112.70718911167607,
+      "R2": 0.6352897182378027,
+      "annual_pred": 100638.0,
+      "annual_err_pct": -1.875938456738363
+    },
+    "Persistence": {
+      "MAE": 9.424325980392156,
+      "RMSE": 28.182348938061686,
+      "MAPE_pos": 78.0016821585934,
+      "R2": 0.949865755947564,
+      "annual_pred": 102613.0,
+      "annual_err_pct": 0.049726019383397366
+    }
+  },
+  "aggregated": {
+    "GBM + transfer": {
+      "div_MAE": 52.06580101261817,
+      "div_RMSE": 118.90003837444239,
+      "div_R2": 0.94584398975319,
+      "nat_MAE": 328.0927089191753,
+      "nat_RMSE": 508.82010991983003,
+      "nat_R2": 0.9337676154505815
+    },
+    "GBM (no transfer)": {
+      "div_MAE": 52.3455797346693,
+      "div_RMSE": 119.57631599807965,
+      "div_R2": 0.9452261824838758,
+      "nat_MAE": 323.284981055954,
+      "nat_RMSE": 496.8819457837787,
+      "nat_R2": 0.9368391028622854
+    },
+    "Mean-3yr baseline": {
+      "div_MAE": 210.59926470588232,
+      "div_RMSE": 546.6537279399978,
+      "div_R2": -0.1447411652606081,
+      "nat_MAE": 1477.513071895425,
+      "nat_RMSE": 2326.024186182483,
+      "nat_R2": -0.38410905137923
+    }
+  },
+  "lstm_subset_n": 2752,
+  "lstm_subset_metrics": {
+    "Blend GBM-log+persist": {
+      "n": 2752,
+      "MAE": 9.881720192029242,
+      "RMSE": 28.33517440941025,
+      "MAPE_pos": 66.52666097392907,
+      "R2": 0.9567884559365897,
+      "annual_pred": 101135.49852500828
+    },
+    "Blend GBM-L1+persist": {
+      "n": 2752,
+      "MAE": 9.845114594655406,
+      "RMSE": 26.37893672304216,
+      "MAPE_pos": 73.7880605524035,
+      "R2": 0.9625490725713074,
+      "annual_pred": 104333.07909651755
+    },
+    "GBM-log + transfer": {
+      "n": 2752,
+      "MAE": 10.978396865277807,
+      "RMSE": 35.07284070664051,
+      "MAPE_pos": 66.37985610160807,
+      "R2": 0.9337951371402177,
+      "annual_pred": 101971.99705001654
+    },
+    "Persistence": {
+      "n": 2752,
+      "MAE": 10.72420058139535,
+      "RMSE": 30.459483907048078,
+      "MAPE_pos": 74.26233228171031,
+      "R2": 0.9500663760968475,
+      "annual_pred": 100299.0
+    },
+    "Mean-3yr": {
+      "n": 2752,
+      "MAE": 37.52174176356589,
+      "RMSE": 158.3651853352745,
+      "MAPE_pos": 185.89723974228093,
+      "R2": -0.3497938078679286,
+      "annual_pred": 161025.1666666667
+    },
+    "LSTM pretrained+finetuned": {
+      "n": 2752,
+      "MAE": 11.312985322193349,
+      "RMSE": 32.200079696706304,
+      "MAPE_pos": 67.54990734420538,
+      "R2": 0.9441964410003425,
+      "annual_pred": 102310.4598568215
+    },
+    "LSTM from scratch": {
+      "n": 2752,
+      "MAE": 11.839051126799697,
+      "RMSE": 35.850979936909994,
+      "MAPE_pos": 64.99858830872132,
+      "R2": 0.9308248568141371,
+      "annual_pred": 92347.02383761096
+    }
+  },
+  "stage1_diagnostics": {
+    "monthly_2025_mae": 4463.071244437114,
+    "monthly_2025_pred_annual": 150211.02881333168,
+    "monthly_2025_actual_annual": 102861.0,
+    "division_2025_mae": 58.798504441319835,
+    "division_2025_n": 408
+  },
+  "per_district": {
+    "blend_beats_mean3yr_districts": 63,
+    "blend_beats_persistence_districts": 54,
+    "dhaka": {
+      "district": "Dhaka",
+      "division": "Dhaka",
+      "actual_total": 32384.0,
+      "mae_blend": 92.66545520241658,
+      "mae_gbm": 125.53338937443566,
+      "mae_mean3yr": 679.7777777777777,
+      "mae_persist": 111.11764705882354,
+      "pred_total_blend": 31535.627456252823,
+      "blend_beats_mean3yr": 1.0
+    }
+  },
+  "caveats": [
+    "Mean-3yr is unusually weak in 2025 because 2023 was a record outbreak (321,593 cases) that inflates the 3-year mean; the baseline over-predicts the 2025 annual total by +57.5%. Beating it in 2025 is easier than in a normal year. The model's absolute error (MAE ~8.6 cases/district-week, annual error +0.2%) is the stronger evidence.",
+    "Persistence (last week = this week) is a strong 1-week-ahead naive forecast (MAE 9.42) and slightly beats the GBM alone (9.55). The blend beats both (8.61). The GBM's edge over persistence is at turning points (top-10% change weeks: GBM 50.4 vs persistence 57.2) and in MAPE (66% vs 78%).",
+    "Transfer-learning (stage-1) features added almost nothing to the GBM (9.55 vs 9.59 MAE) but clearly helped the LSTM (11.31 vs 11.84 MAE; annual +1.3% vs -8.6%).",
+    "1-week-ahead forecasts only, using observed history. Multi-week-ahead skill was not tested.",
+    "MAPE is high (~66%) because many district-weeks have tiny counts, where small absolute errors are large in percentage terms.",
+    "The dghs_division_daily.csv file could not be used as a weekly pretraining series (75% of new_admissions NaN; only 139 complete weeks, all in 2026). Division-weekly data was built by aggregating the observed district-weekly file, so the stage-1 division model is a hierarchical / stacking component, not independent pretraining data.",
+    "Four year-boundary weeks in the Figshare file are all-zero artefacts (2019-08-26, 2022-12-26, 2024-12-30, 2025-12-29) and were masked as missing, never trained on or evaluated.",
+    "No estimated district cases (master file) were used as targets anywhere. All targets are observed Figshare district-week cases."
+  ]
+}

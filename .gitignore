@@ -1,0 +1,14 @@
+# Dependencies & builds
+node_modules/
+.next/
+out/
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# OS & editor
+.DS_Store
+Thumbs.db

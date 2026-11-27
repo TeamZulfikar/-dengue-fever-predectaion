@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Sliders } from "lucide-react";
 import { runWhatIfSimulation } from "@/lib/api";
 import type { WhatIfResponse } from "@/types/dengue";
@@ -16,6 +16,7 @@ export default function WhatIfSimulator({
   initialCases,
   isLiveApi,
 }: WhatIfSimulatorProps) {
+  const maxCases = Math.max(600, Math.ceil((initialCases * 2) / 50) * 50);
   const [casesLastWeek, setCasesLastWeek] = useState<number>(
     Math.round(initialCases)
   );
@@ -23,6 +24,12 @@ export default function WhatIfSimulator({
   const [result, setResult] = useState<WhatIfResponse | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    setCasesLastWeek(Math.round(initialCases));
+    setResult(null);
+    setError(null);
+  }, [district, initialCases]);
 
   async function handleSimulate() {
     setLoading(true);
@@ -68,7 +75,7 @@ export default function WhatIfSimulator({
           <input
             type="range"
             min={0}
-            max={600}
+            max={maxCases}
             step={5}
             value={casesLastWeek}
             onChange={(e) => setCasesLastWeek(Number(e.target.value))}

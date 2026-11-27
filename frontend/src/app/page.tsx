@@ -87,6 +87,8 @@ export default function HomePage() {
     null
   );
   const [districtTs, setDistrictTs] = useState<TimeseriesPoint[]>([]);
+  const [districtTs2026, setDistrictTs2026] = useState<TimeseriesPoint[]>([]);
+  const [chartYear, setChartYear] = useState<"2026" | "2025">("2026");
   const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
@@ -96,6 +98,24 @@ export default function HomePage() {
         setDistricts(res.districts);
         setTop10(res.top10);
         setIsLiveApi(res.isLiveApi);
+        const paramDist = new URLSearchParams(window.location.search).get(
+          "district"
+        );
+        if (paramDist) {
+          const match = res.districts.find(
+            (d) => d.district.toLowerCase() === paramDist.toLowerCase()
+          );
+          if (match) {
+            setSelectedDivision(match.division);
+            setSelectedDistrict(match.district);
+            fetchDivision(match.division).then(setDivisionDetail);
+            fetchDistrictPrediction(match.district).then((p) => {
+              setDistrictPred(p.prediction);
+              setDistrictTs(p.timeseries);
+              setDistrictTs2026(p.timeseries2026);
+            });
+          }
+        }
       })
       .finally(() => setLoading(false));
   }, []);
@@ -105,6 +125,7 @@ export default function HomePage() {
     setSelectedDivision(div);
     setSelectedDistrict(null);
     setDistrictPred(null);
+    window.history.replaceState(null, "", window.location.pathname);
     const detail = await fetchDivision(div);
     setDivisionDetail(detail);
   }
@@ -114,18 +135,23 @@ export default function HomePage() {
     const found = districts.find(
       (d) => d.district.toLowerCase() === districtName.toLowerCase()
     );
+    const canonical = found ? found.district : districtName;
     if (found && found.division !== selectedDivision) {
       setSelectedDivision(found.division);
       const detail = await fetchDivision(found.division);
       setDivisionDetail(detail);
     }
-    setSelectedDistrict(found ? found.district : districtName);
+    setSelectedDistrict(canonical);
     setSearchQuery("");
-    const res = await fetchDistrictPrediction(
-      found ? found.district : districtName
+    window.history.replaceState(
+      null,
+      "",
+      `?district=${encodeURIComponent(canonical)}`
     );
+    const res = await fetchDistrictPrediction(canonical);
     setDistrictPred(res.prediction);
     setDistrictTs(res.timeseries);
+    setDistrictTs2026(res.timeseries2026);
   }
 
   function resetToNational() {
@@ -134,6 +160,8 @@ export default function HomePage() {
     setSelectedDistrict(null);
     setDistrictPred(null);
     setDistrictTs([]);
+    setDistrictTs2026([]);
+    window.history.replaceState(null, "", window.location.pathname);
   }
 
   const divisionsStats = useMemo(() => {
@@ -589,7 +617,28 @@ export default function HomePage() {
                           </p>
                         </div>
 
-                        <div className="flex items-center gap-2">
+                        <div className="flex flex-wrap items-center gap-2">
+                          {districtPred.actual_cases !== null &&
+                            districtPred.actual_cases > 0 && (() => {
+                              const pct =
+                                ((districtPred.pred_blend -
+                                  districtPred.actual_cases) /
+                                  districtPred.actual_cases) *
+                                100;
+                              const isUp = pct >= 0;
+                              return (
+                                <span
+                                  className={`rounded-full border px-2.5 py-1 text-xs font-semibold tabular-nums ${
+                                    isUp
+                                      ? "border-rose-500/40 bg-rose-500/15 text-rose-300"
+                                      : "border-emerald-500/40 bg-emerald-500/15 text-emerald-300"
+                                  }`}
+                                >
+                                  {isUp ? "↑" : "↓"}{" "}
+                                  {pct >= 0 ? `+${pct.toFixed(1)}%` : `${pct.toFixed(1)}%`}
+                                </span>
+                              );
+                            })()}
                           <span
                             className={`rounded-full border px-2.5 py-1 text-xs font-semibold ${
                               RISK_BADGE[districtPred.risk_level].cls
@@ -710,14 +759,48 @@ export default function HomePage() {
                       </div>
                     </div>
 
-                    <TimeseriesChart
-                      points={districtTs}
-                      title={
-                        lang === "bn"
-                          ? `${districtPred.district} — ২০২৫ আসল বনাম পূর্বাভাস`
-                          : `${districtPred.district} — 2025 Actual vs Forecast`
-                      }
-                    />
+                    <div className="space-y-2">
+                      <div className="no-print flex justify-end gap-1.5">
+                        <button
+                          type="button"
+                          onClick={() => setChartYear("2026")}
+                          className={`rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+                            chartYear === "2026"
+                              ? "border-sky-400 bg-sky-500/20 text-sky-300"
+                              : "border-slate-700 bg-slate-900 text-slate-400 hover:text-slate-200"
+                          }`}
+                        >
+                          ২০২৬ সাম্প্রতিক
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => setChartYear("2025")}
+                          className={`rounded-lg border px-2.5 py-1 text-xs font-medium transition ${
+                            chartYear === "2025"
+                              ? "border-sky-400 bg-sky-500/20 text-sky-300"
+                              : "border-slate-700 bg-slate-900 text-slate-400 hover:text-slate-200"
+                          }`}
+                        >
+                          ২০২৫ টেস্ট
+                        </button>
+                      </div>
+                      <TimeseriesChart
+                        points={
+                          chartYear === "2026" && districtTs2026.length > 0
+                            ? districtTs2026
+                            : districtTs
+                        }
+                        title={
+                          chartYear === "2026" && districtTs2026.length > 0
+                            ? lang === "bn"
+                              ? `${districtPred.district} — ২০২৬ সাম্প্রতিক ট্রেন্ড ও পূর্বাভাস`
+                              : `${districtPred.district} — 2026 Recent Trend & Forecast`
+                            : lang === "bn"
+                              ? `${districtPred.district} — ২০২৫ আসল বনাম পূর্বাভাস`
+                              : `${districtPred.district} — 2025 Actual vs Forecast`
+                        }
+                      />
+                    </div>
 
                     <div className="no-print">
                       <WhatIfSimulator

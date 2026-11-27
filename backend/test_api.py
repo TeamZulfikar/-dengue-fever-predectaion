@@ -48,7 +48,9 @@ def main() -> None:
 
     ts = backend_app.timeseries("Dhaka", "test")
     assert len(ts["points"]) > 40
-    print("TIMESERIES Dhaka points:", len(ts["points"]))
+    ts26 = backend_app.timeseries("Dhaka", "2026")
+    assert len(ts26["points"]) > 20
+    print("TIMESERIES Dhaka points: 2025=", len(ts["points"]), "2026=", len(ts26["points"]))
 
     wi = backend_app.whatif("Dhaka", cases_last_week=120, rain_mm_3w_ago=80)
     assert wi["pred_blend"] >= 0

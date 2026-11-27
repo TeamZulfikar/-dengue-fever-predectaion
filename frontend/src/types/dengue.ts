@@ -113,6 +113,7 @@ export interface OfflineSnapshot {
   divisions: Record<string, DivisionDetail>;
   predictions: Record<string, DistrictPrediction>;
   timeseries: Record<string, { district: string; split: string; points: TimeseriesPoint[] }>;
+  timeseries2026?: Record<string, { district: string; split: string; points: TimeseriesPoint[] }>;
 }
 
 export interface WhatIfResponse {

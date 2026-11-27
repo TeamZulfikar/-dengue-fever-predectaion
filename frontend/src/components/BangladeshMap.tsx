@@ -39,6 +39,7 @@ export default function BangladeshMap({
   const layerRef = useRef<L.GeoJSON | null>(null);
   const tileRef = useRef<L.TileLayer | null>(null);
   const markersRef = useRef<L.LayerGroup | null>(null);
+  const labelsRef = useRef<L.LayerGroup | null>(null);
 
   const [baseStyle, setBaseStyle] = useState<BaseMapStyle>("dark");
   const [metric, setMetric] = useState<MapMetric>("pred");
@@ -171,6 +172,7 @@ export default function BangladeshMap({
 
       const markersGroup = leaflet.layerGroup().addTo(map);
       markersRef.current = markersGroup;
+      labelsRef.current = leaflet.layerGroup().addTo(map);
 
       const top3 = [...districts]
         .sort((a, b) => b.pred_blend - a.pred_blend)
@@ -302,6 +304,28 @@ export default function BangladeshMap({
       }
     } else {
       map.flyToBounds(layer.getBounds(), { padding: [14, 14], duration: 0.5 });
+    }
+
+    // Zoom-aware district name labels when a division is selected
+    if (labelsRef.current) {
+      labelsRef.current.clearLayers();
+      if (selectedDivision) {
+        import("leaflet").then(({ default: leaflet }) => {
+          if (!labelsRef.current) return;
+          for (const d of districts) {
+            if (d.division !== selectedDivision) continue;
+            leaflet
+              .marker([d.lat, d.lon], {
+                interactive: false,
+                icon: leaflet.divIcon({
+                  className: "",
+                  html: `<div style="font-size:10px;font-weight:600;color:#f8fafc;text-shadow:0 1px 3px #020617;white-space:nowrap;transform:translate(-50%,-50%)">${d.district}</div>`,
+                }),
+              })
+              .addTo(labelsRef.current);
+          }
+        });
+      }
     }
   }, [districts, selectedDivision, selectedDistrict, metric]);
 

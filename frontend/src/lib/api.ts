@@ -74,23 +74,28 @@ export async function fetchDivision(division: string): Promise<DivisionDetail> {
 export async function fetchDistrictPrediction(district: string): Promise<{
   prediction: DistrictPrediction;
   timeseries: TimeseriesPoint[];
+  timeseries2026: TimeseriesPoint[];
 }> {
   try {
-    const [prediction, ts] = await Promise.all([
+    const [prediction, ts, ts26] = await Promise.all([
       fetchWithTimeout<DistrictPrediction>(
         `${API_BASE}/predict?district=${encodeURIComponent(district)}`
       ),
       fetchWithTimeout<{ points: TimeseriesPoint[] }>(
         `${API_BASE}/timeseries?district=${encodeURIComponent(district)}&split=test`
       ),
+      fetchWithTimeout<{ points: TimeseriesPoint[] }>(
+        `${API_BASE}/timeseries?district=${encodeURIComponent(district)}&split=2026`
+      ),
     ]);
-    return { prediction, timeseries: ts.points };
+    return { prediction, timeseries: ts.points, timeseries2026: ts26.points };
   } catch {
     const snap = await getSnapshot();
     const prediction = snap.predictions[district];
     const ts = snap.timeseries[district]?.points ?? [];
+    const ts26 = snap.timeseries2026?.[district]?.points ?? [];
     if (!prediction) throw new Error(`District ${district} not found`);
-    return { prediction, timeseries: ts };
+    return { prediction, timeseries: ts, timeseries2026: ts26 };
   }
 }
 

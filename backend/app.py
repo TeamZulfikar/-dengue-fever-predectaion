@@ -32,6 +32,7 @@ DATA_DIR = BASE_DIR.parent / "data"
 
 FORECASTS_PATH = DATA_DIR / "forecasts_latest.json"
 PREDICTIONS_PATH = DATA_DIR / "predictions.csv"
+PANEL_PATH = DATA_DIR / "panel_district_stage1.csv"
 METRICS_PATH = DATA_DIR / "metrics.json"
 LAST_UPDATED_PATH = DATA_DIR / "last_updated.json"
 SHAP_PATH = DATA_DIR / "shap_values.csv"
@@ -144,13 +145,22 @@ class AppState:
         self.rate_limiter = IPRateLimiter(
             RATE_LIMIT_MAX_REQUESTS, RATE_LIMIT_WINDOW_SECONDS
         )
+        self._forecasts_mtime: float = 0.0
         self.reload()
+
+    def ensure_fresh(self) -> None:
+        if FORECASTS_PATH.exists():
+            mtime = FORECASTS_PATH.stat().st_mtime
+            if mtime > self._forecasts_mtime:
+                logger.info("Detected updated forecasts_latest.json; reloading state...")
+                self.reload()
 
     def reload(self) -> None:
         if not FORECASTS_PATH.exists():
             raise RuntimeError(
                 f"Missing {FORECASTS_PATH}. Run backend/jobs/weekly_forecast.py first."
             )
+        self._forecasts_mtime = FORECASTS_PATH.stat().st_mtime
         payload = json.loads(FORECASTS_PATH.read_text(encoding="utf-8"))
         self.forecasts_payload: dict[str, Any] = payload
         self.latest_week: str = str(payload["latest_week"])
@@ -214,6 +224,7 @@ async def rate_limit_and_log(request: Request, call_next: Any) -> Any:
         )
 
     start = time.perf_counter()
+    state.ensure_fresh()
     response = await call_next(request)
     elapsed_ms = (time.perf_counter() - start) * 1000.0
     response.headers["X-RateLimit-Remaining"] = str(remaining)
@@ -456,11 +467,32 @@ def top10() -> list[dict[str, Any]]:
 @app.get("/timeseries")
 def timeseries(
     district: str = Query(..., description="District name, e.g. Dhaka"),
-    split: str = Query("test", description="Dataset split: test (2025) or all"),
+    split: str = Query("test", description="Dataset split: test (2025), 2026, or all"),
 ) -> dict[str, Any]:
     resolved = _resolve_district(district)
     if not resolved:
         raise HTTPException(status_code=404, detail=f"District '{district}' not found")
+
+    if split == "2026" and PANEL_PATH.exists():
+        panel = pd.read_csv(
+            PANEL_PATH,
+            usecols=["district", "week_start", "new_cases"],
+        )
+        sub26 = panel[
+            (panel["district"] == resolved) & (panel["week_start"] >= "2026-01-01")
+        ].sort_values("week_start")
+        fc = state.forecast_by_district.get(resolved, {})
+        series = [
+            {
+                "week_start": str(r.week_start),
+                "actual": None if pd.isna(r.new_cases) else round(float(r.new_cases), 1),
+                "pred_blend": fc.get("pred_blend")
+                if str(r.week_start) == state.latest_week
+                else None,
+            }
+            for r in sub26.itertuples(index=False)
+        ]
+        return {"district": resolved, "split": split, "points": series}
 
     sub = state.df[state.df["district"] == resolved].copy()
     if split == "test":

@@ -710,7 +710,7 @@ export default function HomePage() {
                             : "Why this forecast? (Model breakdown)"}
                         </h3>
                         <div className="mt-2.5 space-y-2">
-                          {districtPred.reasons.map((r, idx) => {
+                          {districtPred.reasons.slice(0, 7).map((r, idx) => {
                             const maxImp = Math.max(
                               1,
                               ...districtPred.reasons.map((x) => x.impact)

@@ -370,7 +370,9 @@ def get_shap(district: str = Query(..., description="District name, e.g. Dhaka")
 
     row = sub.iloc[-1]
     reasons = []
-    for i in range(1, 4):
+    for i in range(1, 8):
+        if f"reason_{i}_label" not in row:
+            continue
         reasons.append(
             {
                 "rank": i,

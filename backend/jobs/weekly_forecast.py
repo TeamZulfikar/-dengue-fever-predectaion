@@ -149,7 +149,7 @@ def run_weekly_forecast() -> dict[str, Any]:
 
         contribs = shap_matrix[idx][:-1]  # exclude bias term
         abs_sum = float(np.sum(np.abs(contribs))) or 1.0
-        top_indices = np.argsort(np.abs(contribs))[::-1][:3]
+        top_indices = np.argsort(np.abs(contribs))[::-1][:7]
 
         reasons = []
         shap_rec: dict[str, Any] = {
